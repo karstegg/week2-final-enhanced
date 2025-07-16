@@ -1,5 +1,5 @@
 import React from 'react';
-import { Battery, Zap } from 'lucide-react';
+import { Battery, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
 import { ReportData } from '../../data/reportData';
 import Footer from '../shared/Footer';
 
@@ -21,13 +21,23 @@ const slideStyle: React.CSSProperties = {
 };
 
 const BevPerformanceSlide: React.FC<BevPerformanceSlideProps> = ({ data, footerSrc, weekNumber }) => {
+  const safetyStyles = data.safety.status === 'Good' 
+    ? { card: 'bg-green-50 border-green-200', text: 'text-green-800', detailsText: 'text-green-700' } 
+    : { card: 'bg-orange-100 border-orange-200', text: 'text-orange-800', detailsText: 'text-orange-700' };
   const isAvailabilityGood = data.availability.every(item => item.value >= item.target);
   const isComplianceGood = data.serviceCompliance.every(item => item.value === 100);
   return (
     <div className="bg-white shadow-md rounded-lg" style={slideStyle}>
       <main className="flex-grow p-6 pb-32">
-        <h2 className="text-4xl font-bold text-blue-800 mb-6 text-center">BEV Performance Overview (Nchwaning 3)</h2>
-        <div className="grid grid-cols-2 gap-6 mb-6">
+        <h2 className="text-4xl font-bold text-blue-800 mb-4 text-center">{data.name}</h2>
+        <div className="grid grid-cols-3 gap-4 mb-4">
+          <div className={`${safetyStyles.card} rounded-lg p-4`}>
+            <div className={`flex items-center mb-1 ${safetyStyles.text}`}>
+              {data.safety.status === 'Good' ? <CheckCircle className="mr-2 flex-shrink-0" size={24} /> : <AlertTriangle className="mr-2 flex-shrink-0" size={24} />}
+              <h3 className="text-xl font-bold">Safety</h3>
+            </div>
+            <p className={`text-lg pl-8 ${safetyStyles.detailsText}`}>{data.safety.details}</p>
+          </div>
           <div className={`rounded-lg p-4 ${isAvailabilityGood ? 'bg-green-50 border-green-200' : 'bg-orange-50 border-orange-200'}`}>
             <div className={`flex items-center mb-2 ${isAvailabilityGood ? 'text-green-800' : 'text-orange-800'}`}>
             <Battery className="mr-2" size={24} /><h3 className="text-xl font-bold">BEV Availability (Wk {weekNumber})</h3></div>
@@ -47,9 +57,9 @@ const BevPerformanceSlide: React.FC<BevPerformanceSlideProps> = ({ data, footerS
             </ul>
           </div>
         </div>
-        <div className="mb-4">
-          <h3 className="text-2xl font-bold mb-3 text-center">BEV Availability by Equipment Type</h3>
-          <div className="space-y-4">
+        <div className="mb-3">
+          <h3 className="text-2xl font-bold mb-2 text-center">BEV Availability by Equipment Type</h3>
+          <div className="space-y-2">
             {data.availability.map((item, i) => (
               <div key={i}>
                 <div className="flex justify-between items-center mb-1 px-1"><span className="font-semibold text-lg">{item.label}</span><span className="text-base text-gray-500">Target: {item.target}%</span></div>
@@ -62,8 +72,8 @@ const BevPerformanceSlide: React.FC<BevPerformanceSlideProps> = ({ data, footerS
             ))}
           </div>
         </div>
-        <div className="flex-grow overflow-y-auto pr-2 text-sm">
-          <h3 className="text-xl font-bold mb-2 text-center">Key BEV & Battery Themes</h3>
+        <div className="flex-grow overflow-y-auto pr-2 text-sm mt-3">
+          <h3 className="text-xl font-bold mb-1 text-center">Key BEV & Battery Themes</h3>
           <div className="grid grid-cols-2 gap-x-6">
             <div>
               <h4 className="font-semibold text-yellow-800 mb-1">DT BEV Breakdowns:</h4>
