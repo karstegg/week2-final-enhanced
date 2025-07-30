@@ -35,7 +35,7 @@ export interface ReportData {
   bev: {
     name: string;
     availability: { label: string; value: number; target: number }[];
-    serviceCompliance: { label: string; value: number }[];
+    serviceCompliance: { label: string; value: number | null }[];
     breakdowns: { equipment: string; details: string[] }[];
     batteryThemes: string[];
   };
@@ -61,8 +61,8 @@ export interface SitePerformance {
 }
 
 export const reportData: ReportData = {
-  weekNumber: 3,
-  dateRange: '14 July 2025 to 20 July 2025',
+  weekNumber: 4,
+  dateRange: '21 July 2025 to 27 July 2025',
   
   cover: {
     images: [
@@ -76,133 +76,133 @@ export const reportData: ReportData = {
   footerSrc: '/images/Footer.png',
   heal: {
     highlights: [
-      { site: 'N2', text: 'Engineering hunt completed' },
-      { site: 'N3', text: 'DT 0147 back in operation' },
-      { site: 'N3', text: 'Battery Bay Floor fibrecrete completed' },
-      { site: 'Gloria', text: 'SR0037 tail wheel arrived' }
+      { site: 'N2', text: 'Improved machine availability' },
+      { site: 'N3', text: 'Excellent improvement on BEV DT\'s and overall improved machines performance' },
+      { site: 'Gloria', text: 'TMM availability increased to 88% and all scalers are back in production' },
+      { site: 'Gloria', text: 'Steady recovery of equipment performance to above target, especially SCalers; however FLs still hampered by lineboring repair work on FL0083' }
     ],
     lowlights: [
-      { site: 'N2', text: 'Production 13,000T below target' },
-      { site: 'N3', text: 'HT cable property damage – central sections' },
-      { site: 'Gloria', text: 'TMM Availability at 81%' },
-      { site: 'Gloria', text: 'HD0066 Cable damage' },
-      { site: 'Gloria', text: 'RT0046 Hydraulic pump issue' },
-      { site: 'Gloria', text: 'SR0037 E-Frame issue' },
-      { site: 'Gloria', text: 'FL0083 requires line boring' }
+      { site: 'N2', text: 'Gr12 brake issues & DT120 MC24 issues delaying operations' },
+      { site: 'N3', text: 'Urgent bucket repairs required on FLs' },
+      { site: 'Gloria', text: 'FL availability still a problem due to lineboring' },
+      { site: 'Gloria', text: 'Diesel shortage underground' }
     ],
     emergingIssues: [
-      { site: 'N2', text: 'Large rocks blocking tips' },
-      { site: 'N2', text: 'Fire suppression installation halting afternoon plant shifts' },
-      { site: 'N2', text: 'DT120 controller fault unresolved by OEM' },
-      { site: 'N2', text: 'Critical staff shortages: 2 Mechanics and 1 Plant Fitter resigned' },
-      { site: 'N3', text: "DT's cooling fan failures due to ore being loaded directly onto the articulation area." }
+      { site: 'N2', text: 'Fire suppression system installations for conveyors and the workshop are a key focus' },
+      { site: 'N3', text: 'Stores delivery issues for spares and frequent changes to TMM schedule impacting compliance' },
+      { site: 'Gloria', text: 'Labour shortage at Plant Section' }
     ],
     priorities: [
-      { site: 'N2', text: 'Engage mining to address issue of large rocks at plant tips' },
-      { site: 'N2', text: 'Follow up with Barlows and third parties for DT120 repair' },
-      { site: 'N2', text: 'Submit motivation for fixed-term labor to address staff shortages' },
-      { site: 'N3', text: "Focus on DMPR actions for Thursday's visit" },
+      { site: 'N2', text: 'Focus on DMPR action for wheel nut indicators and increase focus on RTs' },
+      { site: 'N3', text: 'Accelerated intervention on FL bucket repairs' },
+      { site: 'N3', text: 'Focus on DMPR action for wheel nut indicators' },
       { site: 'Gloria', text: 'Bronco to line bore FL0083' },
-      { site: 'Gloria', text: 'Complete new 9 West dam' },
-      { site: 'Gloria', text: 'Focus on improving TMM availability through targeted maintenance' }
+      { site: 'Gloria', text: 'Complete new 9 West dam and appoint GES' }
     ]
   },
-
   sites: {
     gloria: {
       name: 'Gloria',
       trendChart: {
-        src: '/images/Week3/Gloria Weekly Availability Chart - Week3.png',
-        comment: 'Overall Availability MTD for the Gloria site was 85.32%, slightly exceeding the target of 85%. Performance across the fleets was mixed. The DT (98%) and HD (95%) fleets performed exceptionally well, significantly above the 85% target. However, the FL (76%), RT (75%), and SR (65%) fleets all underperformed, falling short of the target.',
+        src: '/images/Week4/Gloria Weekly Availability Chart - Week4.png',
+        comment: 'Good performance with weekly average at 87.8%. Most fleets exceeded targets, but FL underperformed due to repairs and SR was below target.',
       },
       safety: { status: 'Good', details: 'Clear' },
-      weeklyAverage: { value: 85.32, target: 85 },
-      serviceCompliance: { status: 'Good', details: 'Maintenance schedules maintained despite equipment challenges.' },
+      weeklyAverage: { value: 87.8, target: 85 },
+      serviceCompliance: { status: 'Issues', details: 'RT compliance at 50% as RT0045 was not brought in for service.' },
       availability: [
-        { label: 'DT', percentage: 98, target: 85 },
-        { label: 'FL', percentage: 76, target: 85 },
-        { label: 'HD', percentage: 95, target: 85 },
-        { label: 'RT', percentage: 75, target: 85 },
-        { label: 'SR', percentage: 65, target: 85 }
+        { label: 'DT', percentage: 95, target: 85 },
+        { label: 'FL', percentage: 75, target: 85 },
+        { label: 'HD', percentage: 92, target: 85 },
+        { label: 'RT', percentage: 100, target: 85 },
+        { label: 'SR', percentage: 88, target: 85 }
       ],
       keyBreakdowns: [
-        { equipment: 'FL', details: ['FL0083: Line boring required', 'Overall FL fleet affected by equipment issues'] },
-        { equipment: 'RT', details: ['RT0046: Hydraulic pump failure'] },
-        { equipment: 'SR', details: ['SR0037: E Frame issues', 'SR0037 tail wheel replacement in progress'] },
-        { equipment: 'HD', details: ['HD0068: Cable damage affecting operations'] }
+        { equipment: 'FL0083', details: ['Line boring'] }
       ]
     },
     n2: {
       name: 'Nchwaning 2',
       trendChart: {
-        src: '/images/Week3/N2 Weekly Availability Chart - Week3.png',
-        comment: 'Continued strong and stable performance with an overall MTD availability of 89.47%. All fleets are meeting or exceeding their individual performance targets.'
+        src: '/images/Week4/N2 Weekly Availability Chart - Week4.png',
+        comment: 'Excellent performance with an overall weekly availability of 90.39%. All fleets significantly exceeded their performance targets.'
       },
       safety: { status: 'Good', details: 'Clear' },
-      weeklyAverage: { value: 89.47, target: 85 },
-      serviceCompliance: { status: 'Good', details: 'Maintenance compliance maintained despite production challenges.' },
+      weeklyAverage: { value: 90.39, target: 85 },
+      serviceCompliance: { status: 'Issues', details: 'Compliance issues on HD (50%) and RT (75%) due to artisan availability and breakdowns.' },
       availability: [
-        { label: 'DT', percentage: 85, target: 85 },
-        { label: 'FL', percentage: 84, target: 85 },
-        { label: 'HD', percentage: 93, target: 85 },
-        { label: 'RT', percentage: 91, target: 85 },
-        { label: 'SR', percentage: 89, target: 85 }
+        { label: 'DT', percentage: 94, target: 85 },
+        { label: 'FL', percentage: 93, target: 85 },
+        { label: 'HD', percentage: 95, target: 85 },
+        { label: 'RT', percentage: 90, target: 85 },
+        { label: 'SR', percentage: 90, target: 85 }
       ],
       keyBreakdowns: [
-        { equipment: 'DT', details: ['DT120: Machine still standing after Barlows technician could not resolve controller fault showing door is open'] },
-        { equipment: 'General', details: ['Big rocks causing blockages at tips', 'Fire suppression installation on 2West ore-pass taking out entire afternoon shift', '2 Mechanics resigned and 1 on suspension, 1 plant fitter resigned and 1 on suspension'] }
+        { equipment: 'SR', details: ['SR25 pedal issues', 'SR29 lighting problems'] }
       ]
     },
     n3: {
       name: 'Nchwaning 3',
       trendChart: {
-        src: '/images/Week3/N3 Primary Equipment Daily Availabilities - Week3.png',
-        comment: 'Weekly average availability was 87.73%, exceeding the target. However, daily performance for DT and FL fleets showed some volatility.'
+        src: '/images/Week4/N3 Weekly Availability Chart - Week4.png',
+        comment: 'Strong performance with weekly average availability at 89.23%. Most fleets performed well, though DT and FL had some significant breakdowns.'
       },
-      safety: { status: 'Concern', details: 'HT cable property damage in central sections.' },
-      weeklyAverage: { value: 87.73, target: 85 },
-      serviceCompliance: { status: 'Issues', details: 'Weekly compliance at 85%, below the 95% target.' },
+      safety: { status: 'Good', details: 'Clear' },
+      weeklyAverage: { value: 89.23, target: 85 },
+      serviceCompliance: { status: 'Issues', details: 'Compliance issues on DT BEV (50%), RT (80%), and Support Equipment (40%).' },
       availability: [
-        { label: 'DT', percentage: 81.9, target: 85 },
-        { label: 'FL', percentage: 81.6, target: 85 },
-        { label: 'HD', percentage: 88.0, target: 85 },
-        { label: 'RT', percentage: 87.0, target: 85 },
-        { label: 'SR', percentage: 85.8, target: 85 },
-        { label: 'UV', percentage: 98.1, target: 85 },
+        { label: 'DT', percentage: 90, target: 85 },
+        { label: 'FL', percentage: 88, target: 85 },
+        { label: 'HD', percentage: 94, target: 85 },
+        { label: 'RT', percentage: 94, target: 85 },
+        { label: 'SR', percentage: 96, target: 85 }
       ],
       keyBreakdowns: [
-        { equipment: 'DT', details: ["Cooling fan failures due to ore loading practices"] },
-        { equipment: 'General', details: ["HT cable property damage"] }
+        { equipment: 'DT', details: ['DT0161: Major propshaft breakdown'] },
+        { equipment: 'FL', details: ['FL0107: Camera issues', 'FL0102: Steering problems'] }
       ]
     }
   },
   bev: {
     name: 'BEV Fleet',
     availability: [
-      { label: 'DT BEV', value: 82, target: 85 },
-      { label: 'FL BEV', value: 78, target: 85 }
+      { label: 'DT BEV', value: 98, target: 85 },
+      { label: 'FL BEV', value: 83, target: 85 }
     ],
     serviceCompliance: [
-      { label: 'DT BEV', value: 85 }, // NOTE: Compliance data not in source, placeholder value used
-      { label: 'FL BEV', value: 85 }  // NOTE: Compliance data not in source, placeholder value used
+      { label: 'DT BEV', value: 50 },
+      { label: 'FL BEV', value: null } // No maintenance scheduled
     ],
     breakdowns: [
-      { equipment: 'D10147', details: ['Electrical Breakdown: Replace Split drive'] },
-      { equipment: 'FL0112', details: ['Electrical Breakdown: Bucket Problem - E/Bay (wait for parts), repairs on steering @ battery bay'] },
-      { equipment: 'FL0107', details: ['Strata system faulty', 'Multiple battery-related delays and changes'] }
+      { equipment: 'DT BEV', details: ['Auto electrical system faults'] },
+      { equipment: 'FL BEV', details: ['Boilermaker repairs (FL0099, FL0098)', 'Mechanical & Electrical faults (FL0107, FL0108)', 'BMS errors preventing start-up', 'Steering system issues'] }
     ],
     batteryThemes: [
-        'Critical unit D10147 (28% availability) down for split drive replacement.',
-        'Critical unit FL0112 (19% availability) down for bucket repairs.',
-        'Multiple battery and charging-related issues impacting FL0107.'
+        'Persistent battery and charging issues impacting both fleets.',
+        'Significant maintenance requirements, especially on FL fleet (boilermaker, cameras).',
+        'Electrical and software (BMS, Camera) faults are a primary driver of downtime.'
     ]
   },
   shaftsAndWinders: {
-    tonsPerHour: { value: 354, target: 523 },
-    rwAvailability: { value: 95.2, target: 95 },
-    highlights: ['[PENDING] - Awaiting highlights for Shafts & Winders.'],
-    lowlights: ['[PENDING] - Awaiting lowlights for Shafts & Winders.'],
-    emergingIssues: ['[PENDING] - Awaiting emerging issues for Shafts & Winders.'],
-    priorities: ['[PENDING] - Awaiting priorities for Shafts & Winders.']
+    tonsPerHour: { value: 224, target: 523 },
+    rwAvailability: { value: 95.65, target: 95 },
+    highlights: [
+      'SolRock Progress for Week No.5',
+      'Movement with Regards to Fitter and Rigger Positions....'
+    ],
+    lowlights: [
+      'Employee Engagement/Resignations Engagement with SGM due to Culture Issues Identified in Section',
+      'Lamproom Findings Identified with Quarterly Audit',
+      'Changehouse Issues at NCh3'
+    ],
+    emergingIssues: [
+      'Low compliment of Fitters and Riggers in Mechanical Section is still putting pressure on the Section'
+    ],
+    priorities: [
+      'Nch2 Main Fan No.1 Impeller and Bearings Replacement',
+      'Completing Fitter & Rigger Positions in Winder Mechanical Section',
+      'Shaft Repair Work with Solrock Team Weekend No.5',
+      'Address culture & resignation issues with SGM'
+    ]
   },
 };
