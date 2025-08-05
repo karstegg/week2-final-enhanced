@@ -17,7 +17,7 @@ const PrintLayout: React.FC = () => {
       footerSrc={reportData.footerSrc}
     />,
     <IndexSlide sites={reportData.sites} footerSrc={reportData.footerSrc} />,
-    <HealSlide data={reportData.heal} shaftsAndWinders={reportData.shaftsAndWinders} footerSrc={reportData.footerSrc} />,
+    <HealSlide data={reportData.heal} footerSrc={reportData.footerSrc} />,
     <ShaftsWindersSlide data={reportData.shaftsAndWinders} footerSrc={reportData.footerSrc} />,
     <TrendChartSlide 
       title={`${reportData.sites.n3.name} Weekly Availability Trend`}

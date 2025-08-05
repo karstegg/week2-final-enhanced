@@ -13,10 +13,10 @@ This workflow uses the `capture-slides.js` script to automatically navigate thro
     npm run dev
     ```
 
-2.  **Run the Capture Script**: Execute the `capture-slides.js` script from the `weekly-report-generator` directory. This script handles all browser automation, navigation, and screenshotting.
+2.  **Run the Capture Script**: Execute the `capture-slides.js` script from the `weekly-report-generator` directory. The `--verbose` flag is included to provide detailed output.
     ```bash
     // turbo
-    node capture-slides.js
+    node capture-slides.js --verbose
     ```
 
 3.  **Verify**: Review the captured screenshots in the `screenshots/review` folder to confirm data accuracy and correct rendering.

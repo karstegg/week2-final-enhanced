@@ -13,6 +13,7 @@ This workflow uses `claude` to analyze the two weekly report images for the Shaf
 2.  **Use `claude` for Analysis**: For each image, use the `claude` CLI tool to extract the relevant data (Tons Per Hour, RW Availability, highlights, lowlights, etc.).
 
     *   **Example Command**:
+        // turbo
         ```bash
         echo "From the Shafts & Winders report image, extract the values for 'Tons Per Hour' and 'RW Availability', including both the actual value and the target. Also extract the lists of highlights and lowlights." | claude --print --add-dir "public/images/Week<N>"
         ```
