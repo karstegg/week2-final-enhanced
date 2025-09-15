@@ -8,12 +8,19 @@ This workflow uses the `capture-slides.js` script to automatically navigate thro
 
 ### Key Steps:
 
-1.  **Start the Server**: Ensure the local development server is running before initiating the review.
-    ```bash
-    npm run dev
-    ```
+This process requires **two separate terminals**.
 
-2.  **Run the Capture Script**: Execute the `capture-slides.js` script from the `weekly-report-generator` directory. The `--verbose` flag is included to provide detailed output.
+1.  **Terminal 1: Ensure the Dev Server is Running**: The dev server automatically updates when `reportData.ts` changes, so you don't need to restart it for every change.
+    - **Check if it's running**: Use the following command to see if port 5173 is in use. If a process is `LISTENING`, the server is active.
+      ```bash
+      netstat -ano | findstr :5173
+      ```
+    - **If not running, start it**: From the `weekly-report-generator/` directory, start the dev server and leave it running.
+      ```bash
+      npm run dev
+      ```
+
+2.  **Terminal 2: Run the Capture Script**: In a new terminal, navigate to the **project root** directory (`Weekly Report Generator Cloned from Github/`) and execute the `capture-slides.js` script. The `--verbose` flag is included for detailed output.
     ```bash
     // turbo
     node capture-slides.js --verbose

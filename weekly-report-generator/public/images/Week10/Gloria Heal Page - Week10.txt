@@ -1,0 +1,25 @@
+Highlights:
+- Average TMM Availability -  95%
+- DT0184 & DT0185, PR 25000083/A4 & PR 25000084/A4
+
+Lowlights:
+- UV0076 & UV0097- Breakdowns (Hydraulic oil leaks & Electrical wiring faulty)
+- Delay in production. (Refuelling bay no air) Mining removed air supply hose.
+- LDO 558/600/565/598 Breakdowns (Steering rack/Leaf springs/Nerospec server/Starting)
+- Surface silo quadrant 4 Level sensor faulty (Overfilled quadrant caused start-up delay)
+
+Emerging Issues:
+- Labour shortage at Plant Section
+	- Shift Foreman
+	- Boilermaker Chargehand 
+- Labour shortage at Electrical Section. (Labour request done for replacement)
+- 74 Tip Maintenance. (Scheduled for 06-7/09/2025)
+
+Priorities / Actions:
+- Light installations as per plan.
+- Faded labelling on Minisubs and Panels to be corrected before 03/09/2025.
+- 74 Tip Maintenance. (Grizzly, Hammer pins & bushing)
+- CV51 & CV53 Head chute maintenance.
+- Primary TMM Audit repairs. (GCC findings)
+- RT0045 & 46 Engine cut off software. (PR created. Waiting Deutz Diesel Power)
+

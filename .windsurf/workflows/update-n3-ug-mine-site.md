@@ -4,44 +4,32 @@ description: "Extracts all weekly data for the Nchwaning 3 site, including both 
 
 ## Nchwaning 3 Data Extraction Protocol
 
-This workflow uses `claude` to analyze the various weekly report images for the Nchwaning 3 site and extract the necessary data points.
+This workflow outlines data extraction for the Nchwaning 3 site. It prioritizes CSV files from `data-extract/` and falls back to images in `public/images/Week<N>/` using Gemini CLI.
 
-### **Phase 1: Standard Fleet Data**
+### **Phase 1: Data Source Identification**
 
-1.  **Identify Source Images**: Locate the standard fleet report images for N3 in `public/images/Week<N>`:
+1.  **Check for CSV Files**: Look for descriptive CSV files for N3 and BEV data in the `weekly-report-generator/data-extract/` directory (e.g., `N3 Daily Availabilities Week9.csv`, `BEV DT Delays Week9.csv`). These are the primary sources for structured data.
+2.  **Image Fallback**: If CSVs are absent, locate the relevant report images in `public/images/Week<N>/` for Gemini analysis.
     *   `N3 Weekly Availability Chart - Week<N>.png`
     *   `N3 Primary Equipment Daily Availabilities - Week<N>.png`
-
-2.  **Extract Standard Data**: Use `claude` to extract all availability and performance data for the standard (non-BEV) fleets.
-    *   **Example Command**:
-        // turbo
-        ```bash
-        echo "From the image 'N3 Weekly Availability Chart - Week4.png', extract the weekly availability percentage for all listed fleets. Return the data in JSON format." | claude --print --add-dir "public/images/Week4"
-        ```
-
-### **Phase 2: BEV Fleet Data (Critical Details)**
-
-1.  **Identify BEV Source Images**:
     *   `N3 BEV Weekly Dashboard - Week<N>.png`
     *   `N3 Weekly Maintenance Compliance - Week<N>.png`
 
-2.  **Extract BEV Availability & Breakdowns**:
-    *   From the BEV Dashboard, extract the weekly availability, breakdown reasons, and battery themes.
-    *   **Curation Rule:** **DO NOT** include routine operational notes as "breakdowns". For example, "Multiple battery change requests" is **not** a valid issue. Focus only on abnormal faults.
-    *   **Example Command**:
-        // turbo
-        ```bash
-        echo "From 'N3 BEV Weekly Dashboard - Week4.png', extract availability, breakdowns, and battery themes. Exclude routine notes like battery swaps." | claude --print --add-dir "public/images/Week4"
+### **Phase 2: Data Extraction (CSV-First)**
+
+1.  **Standard & BEV Fleet Data**: 
+    *   If descriptive CSV files for N3 and BEV exist, parse them to extract availabilities, breakdowns, compliance, and battery themes.
+    *   If not, use Gemini CLI to extract the data from the fallback images. All Gemini commands must be run from the `weekly-report-generator` directory.
+    *   **Example Gemini Command (from repo root, using `Cwd`):**
+        ```powershell
+        // Command to be run via `run_command` tool
+        // CommandLine: gemini -m gemini-2.5-flash -y -p "From the image, extract the weekly availability for all fleets. @'public/images/Week<N>/N3 Weekly Availability Chart - Week<N>.png'"
+        // Cwd: 'weekly-report-generator'
         ```
 
-3.  **Extract Maintenance Compliance (IMPORTANT)**:
-    *   From the Maintenance Compliance chart, extract the 'Weekly Compliance %' for 'DT BEV' and 'FL BEV'.
+2.  **Maintenance Compliance (from CSV or Image)**:
+    *   Source the 'Weekly Compliance %' for 'DT BEV' and 'FL BEV' from the relevant BEV CSV file or the `N3 Weekly Maintenance Compliance` image.
     *   **Rule:** If a fleet shows no data because no maintenance was scheduled, the `value` in `reportData.ts` **must be set to `null`**.
-    *   **Example Command**:
-        // turbo
-        ```bash
-        echo "From 'N3 Weekly Maintenance Compliance - Week4.png', what is the Weekly Compliance % for DT BEV and FL BEV? Note if any fleet had no scheduled maintenance." | claude --print --add-dir "public/images/Week4"
-        ```
 
 ### **Phase 3: Consolidation**
 

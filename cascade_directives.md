@@ -33,3 +33,11 @@
 ## 6. Interaction Model
 *   **Reporting:** When presenting completed work, I will include a summary of the validation checks I have performed.
 *   **Learning:** All new, persistent instructions will be added to this directive file to ensure our process continuously improves.
+
+## 7. Extraction Policy (Cascade-first)
+- **Primary Tooling:** Use Cascade’s built-in file/image reading; do not call external CLIs by default.
+- **File Referencing:** Reference workspace files inline as `@[relative/path]` to let Cascade open them directly (e.g., `@[weekly-report-generator/public/images/Week7/Gloria Weekly Availability Chart - Week7.png]`).
+- **Outputs:** Prefer MINIFIED JSON matching `ReportData`/`SitePerformance` shapes: `weeklyAverage`, `availability`, `serviceCompliance`, `keyBreakdowns`, `bev.*`.
+- **CLI Use (Optional):** Only if explicitly requested by the user; see memory “CLI extraction references” for examples (Gemini/Claude).
+- **Environment:** Start dev server from `weekly-report-generator/` and run `node capture-slides.js` from repo root when reviewing slides.
+- **BEV Rule:** BEV slide `serviceCompliance` values must be sourced from Nchwaning 3’s weekly maintenance compliance results (apply the N3 values directly to the BEV slide).

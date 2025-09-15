@@ -1,0 +1,34 @@
+﻿Type,Machine_id,All Delays Levels,Comment,Hours
+DTe,DT0150,/Equipment/Breakdown Electrical,OVERHEATING @ BATTERY BAY,102.80
+DTe,DT0171,/Equipment/Breakdown Electrical,HYDRAULIC OIL LEAK@BATTERY BAY.,32.55
+DTe,DT0171,/Equipment/Breakdown Mechanical/Chassis /Bucket,Bucket sensor cable damaged@battery bay.,22.68
+DTe,DT0149,/Equipment/Breakdown Electrical,BATTERY CONNECTION FAILED@13 TUNNEL ENTRANCE.,20.78
+DTe,DT0147,/Equipment/Operational Delays/Battery/Flat Battery,charging,19.78
+DTe,DT0171,/Equipment/Breakdown Electrical,RED STOP LAMP@99N/13 CROSS CUT,18.92
+DTe,DT0163,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown,GEN D1 FAILURE@14W/103S NW (WAITING FOR PARTS),18.00
+DTe,DT0146,/Equipment/Operational Delays,CHANGE BATTERY.,17.43
+DTe,DT0163,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown,'@mw  16w-103s,10.80
+DTe,DT0171,/Equipment/Breakdown Electrical,HIGH TRACTION MOTOR TEMP@12W/93N,8.75
+DTe,DT0147,/Equipment/Breakdown Mechanical,Hydr Temp To High- 30/31w54s R5,7.97
+DTe,DT0146,/Equipment/Operational Delays/Battery/Flat Battery,charging,5.72
+DTe,DT0146,/Equipment/Operational Delays,CHANGE BATTERY,2.53
+DTe,DT0149,/Equipment/Breakdown Mechanical/Hydraulic System,HYDRAULIC TEMP HIGH@BATTERY BAY.,2.10
+DTe,DT0163,/Equipment/Breakdown Electrical/Auto Electrical System - 24v/Strata Breakdown,REAR RIGHT PROXIMITY SENSOR IS LOOSE@BATTERY BAY,2.08
+DTe,DT0149,/Equipment/Operational Delays/Battery/Flat Battery,charging,1.68
+DTe,DT0147,/Equipment/Operational Delays/Battery/Flat Battery,CHARGIBG BATTERY.,1.57
+DTe,DT0163,/Equipment/Operational Delays/Battery/Flat Battery,CHARGING BATTERY.,1.55
+DTe,DT0146,/Equipment/Operational Delays,ROAD BLOCKED.FL108 BREAK DOWN IN PROUDUCTION ROUTE.,0.87
+DTe,DT0147,/Equipment/Operational Delays,ROAD BLOCKED.FL108 BREAK DOWN IN PROUDUCTION ROUTE.,0.85
+DTe,DT0162,/Equipment/Operational Delays,ROAD BLOCKED.FL108 BREAK DOWN IN PROUDUCTION ROUTE.,0.85
+DTe,DT0147,/Equipment/Breakdown Mechanical/Brake System,BRAKE WARNING LIGHT AND BRAKES AUTOMATICALLY@BATTERY BAY.,0.82
+DTe,DT0163,/Equipment/Operational Delays,CHANGE BATTERY,0.75
+DTe,DT0171,/Equipment/Operational Delays/Battery/Flat Battery,NO BATTERY AVAILABLE.,0.73
+DTe,DT0171,/Equipment/Operational Delays,ROAD BLOCKED.FL108 BREAK DOWN IN PROUDUCTION ROUTE.,0.68
+DTe,DT0171,/Equipment/Operational Delays/Battery,CHANGE BATTERY.,0.68
+DTe,DT0171,/Equipment/Breakdown Electrical/Auto Electrical System - 800v/Inverters Units,'@ SATELITE TIP - INVERTER ERROR,0.58
+DTe,DT0163,/Equipment/Operational Delays/Battery,CHARGING BATTERY.,0.52
+DTe,DT0149,/Equipment/Operational Delays/Battery,CHANGE BATTERY.,0.43
+DTe,DT0163,/Equipment/Operational Delays/Battery,CHANGE BATTERY.,0.38
+DTe,DT0162,/Equipment/Operational Delays/Battery,CHANGE BATTERY.,0.27
+DTe,DT0146,/Equipment/Operational Delays,CHANGING BATTERY.,0.22
+DTe,DT0146,/Equipment/Operational Delays/Battery,CHANGE BATTERY.,0.13

@@ -5,10 +5,19 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Development Commands
 
 ```bash
+# Navigate to the React application directory first
+cd weekly-report-generator
+
 npm run dev     # Start development server (opens at http://localhost:5173)
 npm run build   # Build for production (TypeScript check + Vite build)
 npm run lint    # Run ESLint with strict TypeScript rules
 npm run preview # Preview production build locally
+
+# PDF conversion utility (from root directory)
+node convert-pdf-to-images.js "<input.pdf>" "<output/dir>" "<base-name>"
+
+# Slide capture for review (from root directory)
+node capture-slides.js  # Requires dev server to be running
 ```
 
 ## Architecture Overview
@@ -112,3 +121,40 @@ Strong typing prevents data errors:
 - Consistent footer and navigation across all slides
 
 The architecture prioritizes maintainability and ease of weekly updates, requiring only data file modifications for new reports.
+
+## Project Structure
+
+This repository contains:
+- **weekly-report-generator/**: React application for generating reports
+- **convert-pdf-to-images.js**: Utility for converting PDF dashboards to PNG images
+- **capture-slides.js**: Automated screenshot capture tool for slide verification  
+- **.windsurf/workflows/**: Automated workflows for report updates and validation
+- **cascade_directives.md**: Core principles and validation rules for report generation
+
+## Automation Workflows
+
+The project includes several automated workflows in `.windsurf/workflows/`:
+- **weekly-report-update.md**: Main orchestration workflow for weekly updates
+- **update-all-data-sources.md**: Consolidated data extraction from CSV files and images
+- **review-slides.md**: Automated slide screenshot capture and verification
+- **review-heal-matrices.md**: HEAL slide validation with strict formatting rules
+
+## Data Sources and Extraction
+
+Report data comes from two sources:
+1. **Primary**: CSV files in `weekly-report-generator/data-extract/` (n3.csv, bev.csv, gloria.csv, etc.)
+2. **Fallback**: Manual image analysis from `public/images/Week-XX/` folders
+
+Data extraction follows CSV-first logic with image fallback when CSV files are unavailable.
+
+## Critical Business Rules
+
+- **Data Segregation**: Main HEAL slide must never contain Shafts & Winders data
+- **BEV Isolation**: BEV data exclusively appears on the BEV Performance slide
+- **Content Curation**: All HEAL matrix content must fit within fixed-size boxes without scrollbars
+- **Color Coding**: Availability bars use precise thresholds (Green: ≥85%, Yellow: 80-84.9%, Red: <80%)
+- **BEV Service Compliance**: Values must be sourced from Nchwaning 3's maintenance compliance results
+
+## Branch Strategy
+
+Weekly updates should be performed on dedicated branches following the pattern `week-XX` for organized development and review.

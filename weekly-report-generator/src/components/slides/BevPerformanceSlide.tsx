@@ -20,6 +20,33 @@ const slideStyle: React.CSSProperties = {
     backgroundColor: 'white'
 };
 
+type Breakdown = { equipment: string; details: string[] };
+
+function summarizeBreakdown(bd: Breakdown) {
+  const details = Array.isArray(bd.details) ? bd.details : [];
+  const totalLine = details.find((d) => /^Total delay/i.test(d)) || '';
+  const topCausesLine = details.find((d) => /^Top causes/i.test(d)) || '';
+  let causes: string[] = [];
+  if (topCausesLine) {
+    const after = topCausesLine.split(':')[1] || '';
+    causes = after.split(';').map((s) => s.trim()).filter(Boolean);
+  }
+  const topMachinesLine = details.find((d) => /^Top machines/i.test(d));
+  let machines: string[] = [];
+  let moreMachines = 0;
+  if (topMachinesLine) {
+    const after = topMachinesLine.split(':')[1] || '';
+    const parsed = after.split(';').map((s) => s.trim()).filter(Boolean);
+    machines = parsed;
+    moreMachines = Math.max(parsed.length - machines.length, 0);
+  }
+  const total = totalLine
+    .replace(/Total delay\s*/i, 'Total delay: ')
+    .replace(/\(Week\s*(\d+)\)/i, '(Wk $1)')
+    .trim();
+  return { total, causes, machines, moreMachines };
+}
+
 const BevPerformanceSlide: React.FC<BevPerformanceSlideProps> = ({ data, footerSrc, weekNumber }) => {
   const isAvailabilityGood = data.availability.every(item => item.value >= item.target);
   const isComplianceGood = data.serviceCompliance.every(item => item.value === 100);
@@ -49,8 +76,8 @@ const BevPerformanceSlide: React.FC<BevPerformanceSlideProps> = ({ data, footerS
             </ul>
           </div>
         </div>
-        <div className="mb-3">
-          <h3 className="text-2xl font-bold mb-2 text-center">BEV Availability by Equipment Type</h3>
+        <div className="flex-grow overflow-hidden pr-2 text-sm mt-3">
+          <h3 className="text-xl font-bold mb-1 text-center">BEV Availability by Equipment Type</h3>
           <div className="space-y-2">
             {data.availability.map((item, i) => (
               <div key={i}>
@@ -64,15 +91,30 @@ const BevPerformanceSlide: React.FC<BevPerformanceSlideProps> = ({ data, footerS
             ))}
           </div>
         </div>
-        <div className="flex-grow overflow-y-auto pr-2 text-sm mt-3">
+        <div className="flex-grow overflow-hidden pr-2 text-sm mt-3">
           <h3 className="text-xl font-bold mb-1 text-center">Key BEV & Battery Themes</h3>
           <div className="grid grid-cols-2 gap-x-6">
             <div>
               <h4 className="font-semibold text-yellow-800 mb-1">Key Breakdowns:</h4>
-              <ul className="list-disc pl-4 space-y-1">
-                {data.breakdowns.map((bd, i) => (
-                  <li key={i}><span className="font-semibold">{bd.equipment}:</span> {bd.details.join(', ')}</li>
-                ))}
+              <ul className="space-y-2">
+                {data.breakdowns.map((bd, i) => {
+                  const s = summarizeBreakdown(bd);
+                  return (
+                    <li key={i}>
+                      <div className="font-semibold">{bd.equipment}</div>
+                      <ul className="list-disc pl-4 space-y-0.5">
+                        {s.total && <li>{s.total}</li>}
+                        {s.causes.length > 0 && <li>Top causes: {s.causes.join('; ')}</li>}
+                        {s.machines.length > 0 && (
+                          <li>
+                            Top machines: {s.machines.join('; ')}
+                            {s.moreMachines > 0 ? ` (+${s.moreMachines} more)` : ''}
+                          </li>
+                        )}
+                      </ul>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
             <div>

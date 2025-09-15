@@ -1,0 +1,17 @@
+﻿Type,Machine_id,All Delays Levels,Comment,Hours
+FLe,FL0108,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,No connecting Modules- Batt Bay,36.63
+FLe,FL0112,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,Air con+red and greeen light- @WS,23.87
+FLe,FL0098,/Equipment/Operational Delays/Battery/Flat Battery,CHARGING BATTERY,4.47
+FLe,FL0112,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,Air con faulty @Batt Bay,2.35
+FLe,FL0108,/Equipment/Breakdown Electrical,Machine not moving@21W NW SECTION,1.82
+FLe,FL0112,/Equipment/Operational Delays/Battery,CHANGE BATTERY.,1.77
+FLe,FL0112,/Equipment/Operational Delays/Battery/Flat Battery,charging,1.53
+FLe,FL0112,/Equipment/Operational Delays/Battery/Flat Battery,CHARGING BATTERY,1.25
+FLe,FL0108,/Equipment/Breakdown Mechanical,bucket movement @ R5 41w 75s,1.23
+FLe,FL0108,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown,Comms lost-14w74s Nedbank,0.80
+FLe,FL0112,/Equipment/Breakdown Boilermaker,Weld Light Bracket- Boilershop,0.73
+FLe,FL0113,/Equipment/Breakdown Electrical,BMS FAULT @BATTERY BAY.,0.72
+FLe,FL0113,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,Not starting@Boilershop,0.62
+FLe,FL0112,/Equipment/Breakdown Boilermaker,Half Arrow Loose@Boilershop,0.57
+FLe,FL0098,/Equipment/Breakdown Electrical/Auto Electrical System - 800v/Connectors,BATTERY NOT CONNECTING@BATTERY BAY.,0.50
+FLe,FL0098,/Equipment/Operational Delays/Battery,CHANGING BATTERY.,0.20

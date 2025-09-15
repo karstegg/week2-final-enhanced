@@ -13,26 +13,21 @@ This workflow orchestrates the entire weekly report update process, from data ex
 
 ### **Phase 2: Automated Data Extraction**
 
-1.  **Confirm Source Files:**
-    *   Confirm with the user that all new report images for the week have been uploaded to the `public/images/Week<N>/` folder.
+1.  **Confirm Source Files (CSV First):**
+    *   Check for weekly CSV files in `weekly-report-generator/data-extract/`. The presence of CSV files (e.g., `n3.csv`, `bev.csv`, `gloria.csv`) indicates they are the primary source of truth for structured data (availability, compliance, breakdowns).
+    *   If CSV files are not present, confirm with the user that all new report images for the week have been uploaded to the `public/images/Week<N>/` folder to be used as a fallback.
 
-2.  **Process Sites with Updated Workflows:**
-    *   Use `claude` for all image analysis by invoking the updated, specific workflows for each site. The standard command structure pipes a prompt into the tool:
-        ```bash
-        echo "Your data extraction question about a specific image." | claude --print --add-dir "public/images/Week<N>"
-        ```
-    *   Invoke `/update-std-ug-mine-site` for **Nchwaning 2**.
-    *   Invoke `/update-std-ug-mine-site` for **Gloria**.
-    *   Invoke `/update-n3-ug-mine-site` for **Nchwaning 3** (Standard & BEV).
-    *   Invoke `/update-shafts-winders-data` for **Shafts & Winders**.
-
-3.  **Update `reportData.ts`:**
-    *   Gather the JSON output from each workflow and carefully update the main `reportData.ts` file.
+2.  **Run Consolidated Data Extraction:**
+    *   Invoke the `/update-all-data-sources` workflow to extract data for all sites, which will handle the CSV-first logic and update `reportData.ts`.
 
 ### **Phase 3: Automated Slide Review**
 
 1.  **Run Review Workflow:**
-    *   Invoke the `/review-slides-updated` workflow, which uses the `capture-slides.js` script to automatically capture screenshots of all slides for verification.
+    *   Invoke the `/review-slides` workflow, which uses the `capture-slides.js` script to automatically capture screenshots of all slides for verification.
+
+2.  **Verify Data Rendering:**
+    *   Review the captured screenshots, paying close attention to sections that are populated from `reportData.ts` (e.g., Key Breakdowns, HEAL points, BEV themes).
+    *   **Crucially, if data appears correct in the file but is missing or truncated on the slide, investigate the corresponding `.tsx` component file for hardcoded presentation logic.**
 
 ### **Phase 4: HEAL Matrix Validation**
 

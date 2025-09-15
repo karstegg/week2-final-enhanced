@@ -18,15 +18,15 @@ Review the captured screenshots for Slide 3 and Slide 4 against the following no
 
 *   **[ ] Data Segregation Check**: Confirm this slide contains **ONLY** data from the underground sites (N2, N3, Gloria). It **MUST NOT** contain any data from Shafts & Winders.
 *   **[ ] Layout & Overflow Check**: Verify that all text in the Highlights, Lowlights, Emerging Issues, and Priorities quadrants fits within the designated boxes. There must be **NO** overflow, or truncation.
-*   **[ ] Content Check**: Verify that the contents are suitable for an executive audience. Summarise and rephrase as necessary especially if there are many points to capture. Summarise details into higher level items as necessary
+    *   **[ ] Content & Summarization Check**: Raw data is often too verbose. Proactively summarize the content to ensure it is high-level, suitable for an executive audience, and fits the layout without overflow. Consolidate multiple detailed points into single, impactful statements.
 
 **Slide 4: Shafts & Winders (HEAL)**
 
 *   **[ ] Data Segregation Check**: Confirm this slide contains **ONLY** data from Shafts & Winders.
 *   **[ ] Layout & Overflow Check**: Verify all text fits within the designated boxes without any overflow or truncation issues.
-*   **[ ] Content Check**: Verify that the contents are suitable for an executive audience. Summarise and rephrase as necessary especially if there are many points to capture. Summarise details into higher level items as necessary
+    *   **[ ] Content & Summarization Check**: Raw data is often too verbose. Proactively summarize the content to ensure it is high-level, suitable for an executive audience, and fits the layout without overflow. Consolidate multiple detailed points into single, impactful statements.
 
 ### **Phase 3: Remediation**
 
-*   If any rule is violated, the root cause is incorrect data in `reportData.ts`.
-*   **To Fix**: Edit the `heal` and `shaftsAndWinders` objects in `reportData.ts` to be more concise or to remove data from the incorrect section. The primary goal is to ensure 100% compliance with the data segregation and layout rules. Als
+*   If any rule is violated, check the source of truth. The root cause is either incorrect data in the source CSV files (`data-extract/`) or, if no CSVs were used, incorrect data in `reportData.ts` from the image extraction.
+*   **To Fix**: Correct the data in the source CSV file or edit the `heal` and `shaftsAndWinders` objects in `reportData.ts` if images were used. The goal is 100% compliance with data segregation and layout rules.

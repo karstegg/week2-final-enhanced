@@ -1,45 +1,32 @@
 ---
-description: "Extracts all weekly data from the four standard report images for a UG site (N2, Gloria) and prepares it for updating reportData.ts."
+description: "Extracts weekly data for a UG site using Cascade-only image reading (no external CLI) and prepares it for updating reportData.ts."
 ---
 
 ## Standard UG Mine Site Data Extraction Protocol
 
-This workflow uses `claude` to analyze the four standard weekly report images for an underground site (like N2 or Gloria) and extract the necessary data points.
+This workflow outlines data extraction for a standard UG mine site (e.g., N2, Gloria). It prioritizes CSV files and falls back to images using Gemini CLI.
 
-### Key Steps & Learnings:
+### **Phase 1: Data Source Identification**
 
-1.  **Identify Source Images**: Locate the four standard weekly report images for the site in the `public/images/Week<N>` folder. This typically includes:
-    *   Weekly Availability Chart
-    *   HEAL Page
-    *   Daily Availability & Delays
-    *   Weekly Maintenance Compliance
+1.  **Check for CSV File**: Look for a descriptive CSV file for the site (e.g., `Gloria Weekly Availabilities Week9.csv`) in `weekly-report-generator/data-extract/`. This is the primary source.
+2.  **Image Fallback**: If no CSV is found, locate the standard weekly report images in `public/images/Week<N>/` for Gemini analysis.
 
-2.  **Use `claude` for Analysis**: For each of the four images, use the `claude` CLI tool to extract the relevant data. The correct syntax pipes a prompt to the command.
+### **Phase 2: Data Extraction (CSV-First)**
 
-    *   **Example for Weekly Availability Chart**:
-        // turbo
-        ```bash
-        echo "From the Weekly Availability Chart, extract the weekly availability percentage for all listed fleets. Return as JSON." | claude --print --add-dir "public/images/Week<N>"
+1.  **Parse CSV or Images**: 
+    *   If a descriptive site-specific CSV exists, parse it to extract availabilities, breakdowns, and compliance data.
+    *   If not, use Gemini CLI to extract the data from the fallback images. All Gemini commands must be run from the `weekly-report-generator` directory.
+
+2.  **HEAL Data (from Image)**:
+    *   HEAL data is always sourced from the HEAL page image.
+    *   **Example Gemini Command (from repo root, using `Cwd`):**
+        ```powershell
+        // Command to be run via `run_command` tool
+        // CommandLine: gemini -m gemini-2.5-flash -y -p "From the HEAL page, extract concise highlights, lowlights, emerging issues, and priorities. @'public/images/Week<N>/SITE HEAL Page - Week<N>.png'"
+        // Cwd: 'weekly-report-generator'
         ```
 
-    *   **Example for HEAL Page**:
-        // turbo
-        ```bash
-        echo "From the HEAL page, extract the values for LTI, Section 54s, and other key safety metrics." | claude --print --add-dir "public/images/Week<N>"
-        ```
+### **Phase 3: Consolidation**
 
-    *   **Example for Daily Availability**:
-        // turbo
-        ```bash
-        echo "From the Daily Availability image, identify the top 3 reasons for delays or downtime this week." | claude --print --add-dir "public/images/Week<N>"
-        ```
-
-    *   **Example for Maintenance Compliance**:
-        // turbo
-        ```bash
-        echo "From the Weekly Maintenance Compliance chart, extract the compliance percentage for the HD, LHD, and Drill Rig fleets." | claude --print --add-dir "public/images/Week<N>"
-        ```
-
-3.  **Consolidate Data**: Gather all extracted data points from the four images.
-
-4.  **Update `reportData.ts`**: Carefully transfer the consolidated data into the correct site object within the `reportData.ts` file.
+1.  **Consolidate Data**: Gather all extracted data points from the CSV or images.
+2.  **Update `reportData.ts`**: Carefully transfer the consolidated data into the correct site object within `weekly-report-generator/src/data/reportData.ts`.

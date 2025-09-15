@@ -1,5 +1,6 @@
 ---
 description: Provides a new assistant with all the context needed to work on the Weekly Report Generator project.
+auto_execution_mode: 1
 ---
 
 # Onboarding Workflow for the Weekly Report Generator
@@ -20,7 +21,6 @@ Before reviewing project files, you must internalize your purpose and persona.
 Your work and communication must always be:
 
 *   **Accurate & Meticulous:** Demonstrating extreme attention to detail.
-*   **Proactive:** Anticipating needs and performing validation checks autonomously.
 *   **Clear & Concise:** Presenting information and summaries effectively for an executive audience.
 *   **Reliable:** Adhering strictly to all established rules and protocols.
 
@@ -39,11 +39,23 @@ To do this effectively, you must first understand the project's structure and da
 1.  **Read the project's high-level goals:** `@[Weekly Report Generator.md]`
 2.  **Read the general setup and project information:** `@[README.md]`
 3.  **Understand the Data:** The entire report is driven by a single data object. This is the most critical file for you to understand.
-    *   **Crucial:** Read and analyze the data structure file: `@[src/data/reportData.ts]`. Pay close attention to the `ReportData` and `SitePerformance` interfaces. All weekly data must conform to this structure.
+    *   **Crucial:** Read and analyze the data structure file: `@[weekly-report-generator/src/data/reportData.ts]`. Pay close attention to the `ReportData` and `SitePerformance` interfaces. All weekly data must conform to this structure.
 4.  **Understand the Frontend:** The frontend is built with React and renders the data into slides.
-    *   Review how the main application assembles the slides: `@[src/App.tsx]`
-    *   Look at an example of a slide component to see how data is used: `@[src/components/slides/SitePerformanceSlide.tsx]`
-    *   Look at the print-specific layout: `@[src/components/shared/PrintLayout.tsx]`
+    *   Review how the main application assembles the slides: `@[weekly-report-generator/src/App.tsx]`
+    *   Look at an example of a slide component to see how data is used: `@[weekly-report-generator/src/components/slides/SitePerformanceSlide.tsx]`
+    *   Look at the print-specific layout: `@[weekly-report-generator/src/components/shared/PrintLayout.tsx]`
+
+### Data Ingestion Rules (CSV-first)
+
+- **Source of truth**: Use CSVs for structured values (availability, breakdowns, BEV service compliance from N3, replacements). Use screenshots only for narrative bullets or visuals not covered by CSV. If both exist, trust CSV.
+- **Location & naming**: Place weekly CSVs in `weekly-report-generator/data-extract/`. Use filenames like `bev.csv`, `n3.csv`, `gloria.csv` (optional `-weekXX` suffix). Use the latest file unless specified.
+- **Minimal CSV schemas**:
+  - `bev-themes.csv`: `theme, priority` (use top 3–4 by priority, ≤120 chars each).
+  - `bev-breakdowns.csv`: `equipment (DT/FL), unit_id, issue, hours` (include unit IDs in bullets).
+  - `service-compliance.csv`: `label, value` (copy from N3 maintenance compliance).
+  - `replacements.csv`: `old_id, new_id, reason` (e.g., VPX-00006 → VPX-00015).
+- **Slide 11 policies**: Keep 3–4 bullets max; priority = Replacements > Charger faults (fans/modules) > Connector wear > Ratio note. If overflow, drop least‑critical theme first.
+- **Edit target**: Map all data into `@[weekly-report-generator/src/data/reportData.ts]`.
 
 ---
 

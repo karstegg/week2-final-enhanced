@@ -61,8 +61,8 @@ const ShaftsWindersSlide: React.FC<ShaftsWindersSlideProps> = ({ data, footerSrc
         <h2 className="text-4xl font-bold text-blue-800 mb-4 text-center">Shafts & Winders Performance</h2>
         
         <div className="w-full px-12">
-          <ProgressBar label="Weekly Tons/Hr" value={data.tonsPerHour.value} target={data.tonsPerHour.target} unit="" barHeight="h-6" fontSize="text-lg" />
-          <ProgressBar label="Weekly RW Availability (%)" value={data.rwAvailability.value} target={data.rwAvailability.target} unit="%" barHeight="h-6" fontSize="text-lg" />
+          <ProgressBar label="Weekly Tons/Hr" value={data.production.tonsPerHour.value} target={data.production.tonsPerHour.target} unit="" barHeight="h-6" fontSize="text-lg" />
+          <ProgressBar label="Weekly RW Availability (%)" value={data.production.rockWinderAvailability.value} target={data.production.rockWinderAvailability.target} unit="%" barHeight="h-6" fontSize="text-lg" />
         </div>
 
         {/* HEAL Matrix */}
@@ -74,7 +74,7 @@ const ShaftsWindersSlide: React.FC<ShaftsWindersSlideProps> = ({ data, footerSrc
                 <h3 className="text-lg font-bold text-green-800">Highlights</h3>
               </div>
               <ul className="text-sm list-disc pl-5 space-y-0.5 flex-grow overflow-y-auto pr-2">
-                {data.highlights.map((item, i) => <li key={i}>{item}</li>)}
+                {data.heal.highlights.map((item, i) => <li key={i}>{item}</li>)}
               </ul>
             </div>
             <div className="bg-red-50 border border-red-200 rounded-lg p-4 flex flex-col overflow-hidden">
@@ -83,7 +83,7 @@ const ShaftsWindersSlide: React.FC<ShaftsWindersSlideProps> = ({ data, footerSrc
                 <h3 className="text-lg font-bold text-red-800">Lowlights</h3>
               </div>
               <ul className="text-sm list-disc pl-5 space-y-0.5 flex-grow overflow-y-auto pr-2">
-                {data.lowlights.map((item, i) => <li key={i}>{item}</li>)}
+                {data.heal.lowlights.map((item, i) => <li key={i}>{item}</li>)}
               </ul>
             </div>
             <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 flex flex-col overflow-hidden">
@@ -92,7 +92,7 @@ const ShaftsWindersSlide: React.FC<ShaftsWindersSlideProps> = ({ data, footerSrc
                 <h3 className="text-lg font-bold text-yellow-800">Emerging Issues</h3>
               </div>
               <ul className="text-sm list-disc pl-5 space-y-0.5 flex-grow overflow-y-auto pr-2">
-                {data.emergingIssues.map((item, i) => <li key={i}>{item}</li>)}
+                {data.heal.emergingIssues.map((item, i) => <li key={i}>{item}</li>)}
               </ul>
             </div>
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 flex flex-col overflow-hidden">
@@ -101,7 +101,7 @@ const ShaftsWindersSlide: React.FC<ShaftsWindersSlideProps> = ({ data, footerSrc
                 <h3 className="text-lg font-bold text-blue-800">Priorities</h3>
               </div>
               <ul className="text-sm list-disc pl-5 space-y-0.5 flex-grow overflow-y-auto pr-2">
-                {data.priorities.map((item, i) => <li key={i}>{item}</li>)}
+                {data.heal.priorities.map((item, i) => <li key={i}>{item}</li>)}
               </ul>
             </div>
           </div>

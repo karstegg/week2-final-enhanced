@@ -53,46 +53,46 @@ const SitePerformanceSlide: React.FC<SitePerformanceSlideProps> = ({ data, foote
 
   return (
     <div className="bg-white shadow-md rounded-lg" style={slideStyle}>
-      <main className="flex-grow p-6 pb-32">
-        <h2 className="text-4xl font-bold text-blue-800 mb-6 text-center">{data.name} Performance Overview</h2>
-        <div className="grid grid-cols-3 gap-4 mb-6">
-          <div className={`${safetyStyles.card} rounded-lg p-4`}>
+      <main className="flex-grow p-5 pb-32">
+        <h2 className="text-3xl font-bold text-blue-800 mb-5 text-center">{data.name} Performance Overview</h2>
+        <div className="grid grid-cols-3 gap-3 mb-5">
+          <div className={`${safetyStyles.card} rounded-lg p-3`}>
             <div className={`flex items-center mb-1 ${safetyStyles.text}`}>
               {data.safety.status === 'Good' ? <CheckCircle className="mr-2 flex-shrink-0" size={24} /> : <AlertTriangle className="mr-2 flex-shrink-0" size={24} />}
-              <h3 className="text-xl font-semibold">Safety</h3>
+              <h3 className="text-lg font-semibold">Safety</h3>
             </div>
-            <p className={`text-lg pl-8 ${safetyStyles.detailsText}`}>{data.safety.details}</p>
+            <p className={`text-sm pl-8 ${safetyStyles.detailsText}`}>{data.safety.details}</p>
           </div>
-          <div className={`${weeklyAverageStyles.card} rounded-lg p-4 text-center`}>
+          <div className={`${weeklyAverageStyles.card} rounded-lg p-3 text-center`}>
             <div className={`flex items-center justify-center mb-1 ${weeklyAverageStyles.text}`}>
               <BarChart2 className="mr-2 flex-shrink-0" size={24} />
-              <h3 className="text-xl font-semibold">Weekly Avg.</h3>
+              <h3 className="text-lg font-semibold">Weekly Avg.</h3>
             </div>
-            <p className={`font-bold text-4xl ${weeklyAverageStyles.text}`}>{data.weeklyAverage.value}%</p>
-            <p className={`text-lg ${weeklyAverageStyles.targetText}`}>(Target: {data.weeklyAverage.target}%)</p>
+            <p className={`font-bold text-3xl ${weeklyAverageStyles.text}`}>{data.weeklyAverage.value}%</p>
+            <p className={`text-sm ${weeklyAverageStyles.targetText}`}>(Target: {data.weeklyAverage.target}%)</p>
           </div>
-          <div className={`${complianceStyles.card} rounded-lg p-4`}>
+          <div className={`${complianceStyles.card} rounded-lg p-3`}>
             <div className={`flex items-center mb-1 ${complianceStyles.text}`}>
               <Bolt className="mr-2 flex-shrink-0" size={24} />
-              <h3 className="text-xl font-semibold">Compliance</h3>
+              <h3 className="text-lg font-semibold">Compliance</h3>
             </div>
-            <p className={`text-lg ${complianceStyles.detailsText} pl-8`}>{data.serviceCompliance.details}</p>
+            <p className={`text-sm ${complianceStyles.detailsText} pl-8`}>{data.serviceCompliance.details}</p>
           </div>
         </div>
-        <div className="mb-6">
-          <h3 className="text-2xl font-bold mb-4 text-center">Equipment Availability</h3>
-          <div className="grid grid-cols-5 gap-4">
+        <div className="mb-5">
+          <h3 className="text-xl font-bold mb-3 text-center">Equipment Availability</h3>
+          <div className="grid grid-cols-5 gap-3">
             {data.availability.map((item, i) => <AvailabilityBar key={i} {...item} />)}
           </div>
         </div>
         <div>
-          <h3 className="text-2xl font-bold mb-2 text-center">Key Breakdowns</h3>
-          <div className="grid grid-cols-2 gap-x-4 text-lg">
+          <h3 className="text-xl font-bold mb-2 text-center">Key Breakdowns / Issues</h3>
+          <div className="grid grid-cols-2 gap-x-3 text-base leading-tight">
             {data.keyBreakdowns && Array.isArray(data.keyBreakdowns) && data.keyBreakdowns.map((item, i) => (
               <div key={i} className="mb-1">
-                <h4 className="font-semibold text-red-700">{item.equipment}</h4>
+                <h4 className="font-semibold text-red-700 text-base">{item.equipment}</h4>
                 {Array.isArray(item.details) ? (
-                  <ul className="list-disc pl-5">
+                  <ul className="list-disc pl-5 leading-tight">
                     {item.details.map((detail, j) => <li key={j}>{detail}</li>)}
                   </ul>
                 ) : (

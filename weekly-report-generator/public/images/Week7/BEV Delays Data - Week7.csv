@@ -1,0 +1,29 @@
+Equipment Type Full;Machine_id;start_time;end_time;All Delays Levels;Duration (Hours)
+DTe;DT0146;45882,45833;45882,4722;/Equipment/Breakdown Mechanical;0,316666667
+DTe;DT0146;45882,79046;45882,82376;/Equipment/Breakdown Electrical;0,783333333
+DTe;DT0146;45883,4642;45883,90686;/Equipment/Breakdown Mechanical;10,6
+DTe;DT0147;45881,05211;45882,03617;/Equipment/Breakdown Tyre Bay;23,6
+DTe;DT0147;45883,35417;45883,4522;/Equipment/Breakdown Tyre Bay;2,35
+DTe;DT0147;45883,45833;45883,52334;/Equipment/Breakdown Mechanical;1,55
+DTe;DT0149;45881,6365;45881,93002;/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown;7,033333333
+DTe;DT0149;45882,56787;45882,95185;/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown;9,2
+DTe;DT0149;45883,48758;45883,63057;/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown;3,416666667
+DTe;DT0150;45881,36458;45881,47807;/Equipment/Breakdown Electrical;2,716666667
+DTe;DT0150;45883,41667;45883,61046;/Equipment/Breakdown Tyre Bay;4,65
+DTe;DT0162;45881,36458;45881,70833;/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown;8,25
+DTe;DT0162;45882,56686;45882,6067;/Equipment/Breakdown Mechanical/Power Train/Gears;0,933333333
+DTe;DT0162;45883,65957;45883,90811;/Equipment/Breakdown Electrical;5,95
+DTe;DT0163;45880,89911;45881,91083;/Equipment/Breakdown Mechanical;24,26666667
+DTe;DT0163;45882,5;45882,625;/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown;3
+FLe;FL0098;45877,42617;45882,62686;/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v;58,03333333
+FLe;FL0099;45881,28472;45881,42119;/Equipment/Damages;3,266666667
+FLe;FL0099;45883,41912;45883,70148;/Equipment/Breakdown Mechanical/Power Train/Gears;6,766666667
+FLe;FL0107;45880,88575;45880,9013;/Equipment/Breakdown Mechanical/Hydraulic System/Oil;0,366666667
+FLe;FL0107;45881,36458;45881,40194;/Equipment/Breakdown Mechanical/Brake System;0,883333333
+FLe;FL0107;45883,60495;45883,70178;/Equipment/Breakdown Mechanical;2,316666667
+FLe;FL0108;45881,51791;45881,6723;/Equipment/Breakdown Electrical/Auto Electrical System - 24v/Wipers;3,7
+FLe;FL0108;45882,92375;45883,90072;/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v;23,43333333
+FLe;FL0108;45885,0513;;/Equipment/Breakdown Electrical/Auto Electrical System - 800v/Inverters Units;3,766666667
+FLe;FL0113;45881,68692;45881,72551;/Equipment/Breakdown Electrical;0,916666667
+FLe;FL0113;45883,36404;45883,789;/Equipment/Breakdown Mechanical;10,18333333
+FLe;FL0113;45884,43414;;/Equipment/Breakdown Mechanical;18,56666667

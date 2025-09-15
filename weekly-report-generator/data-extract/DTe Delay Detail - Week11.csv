@@ -1,0 +1,33 @@
+﻿Type,Machine_id,All Delays Levels,Comment,Hours
+DTe,DT0150,/Equipment/Breakdown Electrical,Cab loose@batt bay,74.75
+DTe,DT0150,/Equipment/Breakdown Electrical,HYD OIL TEMP HIGH AND OVERHEATING @ 12W MW,65.58
+DTe,DT0146,/Equipment/Operational Delays/Battery/Flat Battery,charging,22.82
+DTe,DT0147,/Equipment/Operational Delays/Battery/Flat Battery,charging,13.00
+DTe,DT0162,/Equipment/Operational Delays/Battery/Flat Battery,charging,10.93
+DTe,DT0146,/Equipment/Operational Delays/Battery/Flat Battery,CHANGE BATTERY,10.08
+DTe,DT0171,/Equipment/Operational Delays/Battery/Flat Battery,charging,9.17
+DTe,DT0162,/Equipment/Breakdown Electrical/Auto Electrical System - 24v/Traveling Lights,Lights@ at battery bay,8.12
+DTe,DT0171,/Equipment/Breakdown Electrical,Battery Thermal syst not active@Batt Bay,6.62
+DTe,DT0171,/Equipment/Breakdown Electrical,RED STOP LAMP@99N/13 CROSS CUT,6.43
+DTe,DT0163,/Equipment/Operational Delays,No Operator,6.00
+DTe,DT0146,/Equipment/Operational Delays,No Operator,5.92
+DTe,DT0149,/Equipment/Operational Delays,No Operator,5.92
+DTe,DT0149,/Equipment/Operational Delays/Battery,Battery not connecting@SAT Tip 2,4.17
+DTe,DT0162,/Equipment/Operational Delays,No Operator,4.10
+DTe,DT0146,/Equipment/Operational Delays/Battery/Flat Battery,CHARGE BATTERY,3.20
+DTe,DT0149,/Equipment/Operational Delays,CHANGE BATTERY,2.73
+DTe,DT0150,/Equipment/Operational Delays/Battery/Flat Battery,charging,2.52
+DTe,DT0147,/Equipment/Operational Delays,CHANGE BATTERY,1.97
+DTe,DT0171,/Equipment/Breakdown Electrical/Auto Electrical System - 800v/800v Battery,FAIL TO START BECAUSE OF BATTERY CONNECTION @  BATTERY BAY,1.67
+DTe,DT0171,/Equipment/Breakdown Electrical,moto traction temp high @ NW 21W 108S,1.62
+DTe,DT0171,/Equipment/Operational Delays/Battery/Flat Battery,CHANGE BATTERY,1.58
+DTe,DT0162,/Equipment/Operational Delays,CHANGE BATTERY,1.57
+DTe,DT0147,/Equipment/Breakdown Mechanical/Brake System,brakes locked @ battery bay,1.22
+DTe,DT0146,/Equipment/Operational Delays,CHANGE BATTERY,1.03
+DTe,DT0171,/Equipment/Breakdown Electrical/Auto Electrical System - 24v/Strata Breakdown,MW 104S,0.82
+DTe,DT0146,/Equipment/Breakdown Electrical/Auto Electrical System - 800v/Inverters Units,mw road,0.75
+DTe,DT0163,/Equipment/Operational Delays,CHANGE BATTERY,0.60
+DTe,DT0146,/Equipment/Breakdown Electrical,red stop lamp error @ battery bay,0.48
+DTe,DT0171,/Equipment/Operational Delays,CHANGE BATTERY,0.40
+DTe,DT0163,/Equipment/Operational Delays/Battery/Flat Battery,CHANGE BATTERY,0.23
+DTe,DT0163,/Equipment/Operational Delays,CHANGING BATTERY,0.20
