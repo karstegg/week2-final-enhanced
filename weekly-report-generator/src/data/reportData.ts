@@ -220,9 +220,10 @@ export const reportData: ReportData = {
       }
     ],
     batteryThemes: [
-      'Frequent battery charging and change-outs impacting availability.',
-      'Battery connection and thermal system faults causing downtime.',
-      'Focus on improving battery management and operator practices.',
+      'Multiple charger faults (modules, tripping, connectors) are impacting operations.',
+      '3 batteries are currently out of service for maintenance (TMS, fire suppression).',
+      'Worn charger and battery inlet connectors are a likely root cause for charging stops.',
+      'Battery-to-machine ratio remains healthy, meeting the 1.6 target.',
     ],
   },
 };
