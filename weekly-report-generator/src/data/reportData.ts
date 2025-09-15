@@ -176,7 +176,7 @@ export const reportData: ReportData = {
         comment: 'DT avail 72%, FL avail 60%, HD avail 77%, RT avail 87%, SR avail 81%',
       },
       safety: { status: 'Good', details: '' },
-      weeklyAverage: { value: 76, target: 85 },
+      weeklyAverage: { value: 84, target: 85 },
       serviceCompliance: { status: 'Issues', details: 'RT compliance at 80% (RT0041 not in use) and SR compliance at 80% (SR0034 not in for service).' },
       availability: [
         { label: 'DT', percentage: 72, target: 85 },
