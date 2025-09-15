@@ -179,10 +179,10 @@ export const reportData: ReportData = {
       weeklyAverage: { value: 84, target: 85 },
       serviceCompliance: { status: 'Issues', details: 'RT compliance at 80% (RT0041 not in use) and SR compliance at 80% (SR0034 not in for service).' },
       availability: [
-        { label: 'DT', percentage: 72, target: 85 },
-        { label: 'FL', percentage: 60, target: 85 },
-        { label: 'HD', percentage: 77, target: 85 },
-        { label: 'RT', percentage: 87, target: 85 },
+        { label: 'DT', percentage: 82, target: 85 },
+        { label: 'FL', percentage: 84, target: 85 },
+        { label: 'HD', percentage: 78, target: 85 },
+        { label: 'RT', percentage: 89, target: 85 },
         { label: 'SR', percentage: 81, target: 85 }
       ],
       keyBreakdowns: [
