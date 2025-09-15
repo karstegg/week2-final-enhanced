@@ -207,15 +207,15 @@ export const reportData: ReportData = {
       {
         fleet: 'DT BEV',
         details: [
-          'Top causes: Cab loose (DT0150), Overheating (DT0150), Flat batteries.',
-          'Top machines: DT0150, DT0146, DT0171.'
+          'Top causes: Cab loose (DT0150), Overheating & traction motor faults (DT147, DT171), STRATA/electrical issues (DT163, DT149).',
+          'Top machines: DT0150, DT0171, DT0149.'
         ]
       },
       {
         fleet: 'FL BEV',
         details: [
-          'Top causes: Half arrows (FL0112), Hydraulic leaks (FL0098), Machine cutting off (FL0108).',
-          'Top machines: FL0112, FL0098, FL0108.'
+          'Top causes: Boilermaker for half-arrows (FL0112), various electrical faults (BMS, door locks) (FL108, FL99), STRATA faults (FL98).',
+          'Top machines: FL0112, FL0108, FL0098.'
         ]
       }
     ],
