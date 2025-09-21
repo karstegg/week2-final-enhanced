@@ -26,4 +26,4 @@ This process requires **two separate terminals**.
     node capture-slides.js --verbose
     ```
 
-3.  **Verify**: Review the captured screenshots in the `screenshots/review` folder to confirm data accuracy and correct rendering.
+3.  **Verify**: Review the captured screenshots in the `weekly-report-generator/screenshots/review/` folder to confirm data accuracy and correct rendering. The files are named `slide-XX.png` (e.g., `slide-03.png`).

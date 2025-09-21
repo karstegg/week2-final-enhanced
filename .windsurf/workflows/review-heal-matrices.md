@@ -12,7 +12,7 @@ This workflow is mandatory for reviewing the departmental and Shafts & Winders H
 
 ### **Phase 2: Critical Review Checklist**
 
-Review the captured screenshots for Slide 3 and Slide 4 against the following non-negotiable rules:
+Review the captured screenshots for Slide 3 and Slide 4 against the following non-negotiable rules. The screenshots are located in `weekly-report-generator/screenshots/review/`.
 
 **Slide 3: Departmental Overview (HEAL)**
 
