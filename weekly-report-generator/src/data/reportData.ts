@@ -22,8 +22,10 @@ export interface ReportData {
     priorities: { site: string; text: string; }[];
   };
   shaftsAndWinders: {
-    tonsPerHour: { value: number; target: number };
-    rwAvailability: { value: number; target: number };
+    production: {
+      tonsPerHour: { value: number; target: number };
+      rockWinderAvailability: { value: number; target: number };
+    };
     heal: {
       highlights: string[];
       lowlights: string[];
@@ -121,8 +123,10 @@ export const reportData: ReportData = {
     ],
   },
   shaftsAndWinders: {
-    tonsPerHour: { value: 371, target: 523 },
-    rwAvailability: { value: 96.12, target: 95 },
+    production: {
+      tonsPerHour: { value: 371, target: 523 },
+      rockWinderAvailability: { value: 96.12, target: 95 },
+    },
     heal: {
       highlights: [
         'All planned Earthing (Annual) Test completed_awaiting reports',
