@@ -16,14 +16,18 @@ This workflow sets up the environment for a new weekly report.
 
 ### **Phase 2: Data Preparation**
 
-1.  **Confirmation:** Inform the user that the branch `week-XX` has been created and is ready.
+1.  **Clear Old Data:**
+    *   // turbo
+    *   Execute `rm -rf weekly-report-generator/data-extract/*` to ensure no stale data from the previous week is carried over.
 
 2.  **Create Image Directory:**
     *   // turbo
     *   Create the directory for the week's images at `weekly-report-generator/public/images/WeekXX`, where `XX` is the current week number.
 
-3.  **Request Data:** Prompt the user to upload the weekly data, reminding them of the correct locations:
-    *   For structured data (availability, breakdowns), place CSV files in `weekly-report-generator/data-extract/`.
-    *   For images (trend charts, etc.), place files in the newly created `weekly-report-generator/public/images/WeekXX/` directory.
+3.  **Confirmation and Data Request:**
+    *   Inform the user that the branch `week-XX` is ready and that the `data-extract` directory has been cleared.
+    *   Prompt the user to upload all new data for the current week, reminding them of the correct locations:
+        *   **CSVs & PDFs:** `weekly-report-generator/data-extract/`
+        *   **Images:** `weekly-report-generator/public/images/WeekXX/`
 
-4.  **Next Steps:** Once the data is uploaded, advise the user to confirm so the `/weekly-report-update` workflow can begin.
+4.  **Next Steps:** Advise the user to confirm once all data is uploaded so the `/weekly-report-update` workflow can begin.

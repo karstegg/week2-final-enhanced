@@ -13,9 +13,9 @@ This workflow orchestrates the entire weekly report update process, from data ex
 
 ### **Phase 2: Automated Data Extraction**
 
-1.  **Confirm Source Files (CSV First):**
-    *   Check for weekly CSV files in `weekly-report-generator/data-extract/`. The presence of CSV files (e.g., `n3.csv`, `bev.csv`, `gloria.csv`) indicates they are the primary source of truth for structured data (availability, compliance, breakdowns).
-    *   If CSV files are not present, confirm with the user that all new report images for the week have been uploaded to the `public/images/Week<N>/` folder to be used as a fallback.
+1.  **Confirm Source Files (PDF-First for BEV):**
+    *   **For BEV Data:** Prioritize the Epiroc PDF report (`BRMO weekly report...`) as the primary source for breakdowns and battery/charger themes. Use CSV data to supplement information for days not covered by the PDF (typically Friday-Sunday).
+    *   **For Other Sites:** Use CSV files in `weekly-report-generator/data-extract/` as the primary source of truth. If CSVs are not present, fall back to report images in `public/images/Week<N>/`.
 
 2.  **Run Consolidated Data Extraction:**
     *   Invoke the `/update-all-data-sources` workflow to extract data for all sites, which will handle the CSV-first logic and update `reportData.ts`.
