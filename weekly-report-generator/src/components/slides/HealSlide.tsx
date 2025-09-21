@@ -23,7 +23,7 @@ const slideStyle: React.CSSProperties = {
 const MAX_CHARS_PER_ITEM = 110;
 const LIMITS = {
   highlights: 8,
-  lowlights: 4,
+  lowlights: 6,
   emerging: 6,
   priorities: 6,
 };
