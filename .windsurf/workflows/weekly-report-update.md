@@ -20,6 +20,10 @@ This workflow orchestrates the entire weekly report update process, from data ex
 2.  **Run Consolidated Data Extraction:**
     *   Invoke the `/update-all-data-sources` workflow to extract data for all sites, which will handle the CSV-first logic and update `reportData.ts`.
 
+3.  **Data Integrity Check:**
+    *   **Verify File Path:** Before editing, confirm you are targeting `weekly-report-generator/src/data/reportData.ts`. An identically named file at the root `src/` must be ignored.
+    *   **Check Component Logic:** If data appears correct in the file but renders incorrectly on a slide (e.g., is missing or truncated), the next step is to investigate the corresponding `.tsx` component file for hardcoded presentation logic (e.g., item limits).
+
 ### **Phase 3: Automated Slide Review**
 
 1.  **Run Review Workflow:**
@@ -33,6 +37,9 @@ This workflow orchestrates the entire weekly report update process, from data ex
 
 1.  **Invoke HEAL Review Workflow:**
     *   Invoke the `/review-heal-matrices` workflow to perform a full, standardized review of the Departmental and Shafts & Winders HEAL slides. This workflow covers all data segregation, layout, and content curation checks.
+
+2.  **Content Curation:**
+    *   **Abbreviate Site Names:** For the HEAL slide, ensure all site names are abbreviated for conciseness (e.g., `[N2]`, `[N3]`).
 
 ### **Phase 5: Finalization**
 
