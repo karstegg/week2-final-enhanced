@@ -232,8 +232,7 @@ export const reportData: ReportData = {
       }
     ],
     batteryThemes: [
-      'Frequent battery changes and charging cycles are a primary driver of operational delays.',
-      'Electrical faults, including STRATA communication and inverter errors, are a recurring issue.',
+      'Critical failure of the BEV Bay crane motor halted all battery swaps, exposing a major infrastructure vulnerability.',
     ],
   },
 };
