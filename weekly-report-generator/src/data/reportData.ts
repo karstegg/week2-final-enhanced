@@ -86,14 +86,15 @@ export const reportData: ReportData = {
       { site: 'N3', text: 'GES interviews conducted and candidates identified.' },
     ],
     lowlights: [
-      { site: 'Gloria', text: 'Vibration analysis on MVT screen not looking good.' },
+      { site: 'Gloria', text: 'Vibration analysis on MVT screen out of spec.' },
       { site: 'N2', text: 'Production below target; long lead time on spares for DT128 & FL92.' },
       { site: 'N3', text: 'Delayed interventions to diesel fleet by OEM/specialists.' },
       { site: 'N3', text: 'HD 0062 engine overheating leading to replacements.' },
     ],
     emergingIssues: [
-      { site: 'N2', text: 'Experiencing new breakdowns after Level 9 commissioning on DTs (e.g., brakes not releasing).' },
-      { site: 'Gloria', text: 'Meeting required to discuss non-recommended Shift Foreman candidate.' },
+      { site: 'N2', text: 'Experiencing new breakdowns after Level 9 commissioning on DTs (e.g., brakes not releasing)' },
+      { site: 'N2', text: 'Similar problems with Scaler in crawl mode when working' },
+      { site: 'Gloria', text: 'Meeting with HR required to discuss non-recommended Shift Foreman candidate.' },
     ],
     priorities: [
       { site: 'Gloria', text: 'Conduct vibration analysis on MTV; scan 78CV01/51CV01 belts.' },
@@ -134,14 +135,14 @@ export const reportData: ReportData = {
         comment: '',
       },
       safety: { status: 'Good', details: '' },
-      weeklyAverage: { value: 89, target: 95 },
+      weeklyAverage: { value: 93, target: 85 },
       serviceCompliance: { status: 'Good', details: 'All planned maintenance completed.' },
       availability: [
-        { label: 'DT', percentage: 93, target: 95 },
-        { label: 'FL', percentage: 86, target: 95 },
-        { label: 'HD', percentage: 92, target: 95 },
-        { label: 'RT', percentage: 87, target: 95 },
-        { label: 'SR', percentage: 88, target: 95 }
+        { label: 'DT', percentage: 93, target: 85 },
+        { label: 'FL', percentage: 86, target: 85 },
+        { label: 'HD', percentage: 92, target: 85 },
+        { label: 'RT', percentage: 87, target: 85 },
+        { label: 'SR', percentage: 88, target: 85 }
       ],
       keyBreakdowns: [
         { equipment: 'RT', details: ['RT0027 - Drifter'] },
@@ -155,7 +156,7 @@ export const reportData: ReportData = {
         comment: '',
       },
       safety: { status: 'Good', details: '' },
-      weeklyAverage: { value: 86, target: 85 },
+      weeklyAverage: { value: 89, target: 85 },
       serviceCompliance: { status: 'Issues', details: 'DT fleet at 67% (DT0128 breakdown), FL fleet at 33% (low availability).' },
       availability: [
         { label: 'DT', percentage: 82, target: 85 },
@@ -176,7 +177,7 @@ export const reportData: ReportData = {
         comment: '',
       },
       safety: { status: 'Good', details: '' },
-      weeklyAverage: { value: 87, target: 85 },
+      weeklyAverage: { value: 88, target: 85 },
       serviceCompliance: { status: 'Good', details: 'All planned maintenance completed.' },
       availability: [
         { label: 'DT', percentage: 85, target: 85 },
