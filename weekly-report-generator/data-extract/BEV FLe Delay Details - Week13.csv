@@ -1,0 +1,13 @@
+﻿Type,Machine_id,All Delays Levels,Comment,Hours
+FLe,FL0113,/Equipment/Breakdown Electrical,BATTERY LOCK STUCK@BATTERY BAY.,9.18
+FLe,FL0112,/Equipment/Operational Delays/Battery/Flat Battery,charging,5.73
+FLe,FL0098,/Equipment/Operational Delays/Battery/Flat Battery,CHARGING BATTERY.,5.10
+FLe,FL0098,/Equipment/Operational Delays/Battery/Flat Battery,CHARGING.,4.07
+FLe,FL0098,/Equipment/Operational Delays/Battery/Flat Battery,"",3.42
+FLe,FL0107,/Equipment/Breakdown Mechanical,battery not connecting @ mw 92s 11w,3.28
+FLe,FL0113,/Equipment/Operational Delays/Battery/Flat Battery,CHARGE BATTERY.,3.28
+FLe,FL0107,/Equipment/Breakdown Electrical,BUCKET LEVER FAULTY@BATTERY BAY.,2.55
+FLe,FL0113,/Equipment/Operational Delays/Battery/Flat Battery,charging,2.15
+FLe,FL0112,/Equipment/Operational Delays/Battery/Flat Battery,Change Batt,1.77
+FLe,FL0112,/Equipment/Operational Delays/Battery/Flat Battery,CHARGING.,0.68
+FLe,FL0107,/Equipment/Breakdown Boilermaker,Weld buked (w/s),-14.35

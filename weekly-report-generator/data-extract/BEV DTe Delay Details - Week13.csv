@@ -1,0 +1,30 @@
+﻿Type,Machine_id,All Delays Levels,Comment,Hours
+DTe,DT0150,/Equipment/Breakdown Mechanical,hydraulic temperature high @ satelite tips,21.92
+DTe,DT0171,/Equipment/Breakdown Mechanical/Hydraulic System/Hoses,'+ need oil (63s 50w swd,16.75
+DTe,DT0150,/Equipment/Operational Delays/Battery/Flat Battery,charging,13.87
+DTe,DT0149,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown,GENERAL B1 COMM ERROR@BATTERY BAY.,9.33
+DTe,DT0162,/Equipment/Breakdown Mechanical/Brake System,Brake self (battery bay),8.00
+DTe,DT0146,/Equipment/Operational Delays/Battery/Flat Battery,CHARGE BATTERY.,7.50
+DTe,DT0163,/Equipment/Operational Delays/Battery/Flat Battery,charging,4.15
+DTe,DT0171,/Equipment/Breakdown Mechanical,Hyd Pipe Burst@WS,3.73
+DTe,DT0150,/Equipment/Operational Delays/Battery/Flat Battery,CHARGING BATTERY.,3.42
+DTe,DT0163,/Equipment/Operational Delays/Battery/Flat Battery,CHARGE BATTERY.,3.37
+DTe,DT0149,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown,strata system faulty @ mw 104s 10e,2.20
+DTe,DT0163,/Equipment/Breakdown Electrical/Auto Electrical System - 24v/Air Conditioner,aircon faulty @ battery bay,2.10
+DTe,DT0163,/Equipment/Operational Delays/Battery/Flat Battery,'@ battery bay - charging,1.77
+DTe,DT0146,/Equipment/Operational Delays/Battery/Flat Battery,charging,1.60
+DTe,DT0163,/Equipment/Operational Delays/Battery/Flat Battery,CHARGING BATTERY.,1.05
+DTe,DT0146,/Equipment/Operational Delays/Battery/Flat Battery,Change Batt,1.00
+DTe,DT0146,/Equipment/Operational Delays/Battery,CHANGE BATTERY.,0.70
+DTe,DT0146,/Equipment/Breakdown Electrical/Auto Electrical System - 24v/Strata Breakdown,s2n box (ovoidins collision),0.65
+DTe,DT0149,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown,STTRATA FAULTY@BATTERY BAY.,0.60
+DTe,DT0149,/Equipment/Operational Delays/Battery/Flat Battery,CHARGING BATTERY.,0.57
+DTe,DT0150,/Equipment/Operational Delays/Battery,CHANGE BATTERY.,0.57
+DTe,DT0147,/Equipment/Breakdown Mechanical,no battery connection @ battery bay,0.48
+DTe,DT0163,/Equipment/Operational Delays/Battery,BATTERY CHANGE.,0.37
+DTe,DT0163,/Equipment/Operational Delays/Battery,Battery Swap,0.37
+DTe,DT0171,/Equipment/Operational Delays/Battery,CHANGE BATTERY.,0.37
+DTe,DT0162,/Equipment/Operational Delays,CHANGE BATTERY,0.33
+DTe,DT0162,/Equipment/Operational Delays/Battery,BATTERY CHANGE.,0.18
+DTe,DT0149,/Equipment/Operational Delays/Battery,BATTERY CHANGE.,0.15
+DTe,DT0163,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown,GEM B2 COMMS ERROR @108N/13E 13 TUNNEL NW (No component.Waiting for parts),-35.75

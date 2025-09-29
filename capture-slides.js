@@ -9,6 +9,7 @@ if (!fs.existsSync(outputDir)) {
 (async () => {
   const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
+  await page.setCacheEnabled(false);
   await page.goto('http://localhost:5173', { waitUntil: 'networkidle0' });
   await page.setViewport({ width: 1920, height: 1080 });
 
