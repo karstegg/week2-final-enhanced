@@ -138,11 +138,11 @@ export const reportData: ReportData = {
       weeklyAverage: { value: 93, target: 85 },
       serviceCompliance: { status: 'Good', details: 'All planned maintenance completed.' },
       availability: [
-        { label: 'DT', percentage: 93, target: 85 },
-        { label: 'FL', percentage: 86, target: 85 },
-        { label: 'HD', percentage: 92, target: 85 },
-        { label: 'RT', percentage: 87, target: 85 },
-        { label: 'SR', percentage: 88, target: 85 }
+        { label: 'DT', percentage: 97, target: 85 },
+        { label: 'FL', percentage: 89, target: 85 },
+        { label: 'HD', percentage: 94, target: 85 },
+        { label: 'RT', percentage: 96, target: 85 },
+        { label: 'SR', percentage: 91, target: 85 }
       ],
       keyBreakdowns: [
         { equipment: 'RT', details: ['RT0027 - Drifter'] },
@@ -159,10 +159,10 @@ export const reportData: ReportData = {
       weeklyAverage: { value: 89, target: 85 },
       serviceCompliance: { status: 'Issues', details: 'DT fleet at 67% (DT0128 breakdown), FL fleet at 33% (low availability).' },
       availability: [
-        { label: 'DT', percentage: 82, target: 85 },
-        { label: 'FL', percentage: 72, target: 85 },
-        { label: 'HD', percentage: 91, target: 85 },
-        { label: 'RT', percentage: 87, target: 85 },
+        { label: 'DT', percentage: 84, target: 85 },
+        { label: 'FL', percentage: 78, target: 85 },
+        { label: 'HD', percentage: 96, target: 85 },
+        { label: 'RT', percentage: 89, target: 85 },
         { label: 'SR', percentage: 98, target: 85 }
       ],
       keyBreakdowns: [
@@ -180,15 +180,16 @@ export const reportData: ReportData = {
       weeklyAverage: { value: 88, target: 85 },
       serviceCompliance: { status: 'Good', details: 'All planned maintenance completed.' },
       availability: [
-        { label: 'DT', percentage: 85, target: 85 },
-        { label: 'FL', percentage: 90, target: 85 },
-        { label: 'HD', percentage: 80, target: 85 },
-        { label: 'RT', percentage: 92, target: 85 },
-        { label: 'SR', percentage: 84, target: 85 }
+        { label: 'DT', percentage: 88, target: 85 },
+        { label: 'FL', percentage: 84, target: 85 },
+        { label: 'HD', percentage: 83, target: 85 },
+        { label: 'RT', percentage: 95, target: 85 },
+        { label: 'SR', percentage: 82, target: 85 }
       ],
       keyBreakdowns: [
         { equipment: 'HD', details: ['HD0062 - Engine overheat; HD0056 - No engine oil'] },
         { equipment: 'SR', details: ['SR0030 - Boom Cylinder; Strata rotation light'] },
+        { equipment: 'FL', details: ['No major breakdowns reported'] },
       ],
     }
   },
