@@ -149,14 +149,13 @@ export const reportData: ReportData = {
         { label: 'SR', percentage: 89, target: 85 }
       ],
       keyBreakdowns: [
-        { equipment: 'DT', details: ['DT120: Machine still standing after Barlows technician could not resolve controller fault showing door is open'] },
         { equipment: 'General', details: ['Big rocks causing blockages at tips', 'Fire suppression installation on 2West ore-pass taking out entire afternoon shift', '2 Mechanics resigned and 1 on suspension, 1 plant fitter resigned and 1 on suspension'] }
       ]
     },
     n3: {
       name: 'Nchwaning 3',
       trendChart: {
-        src: '/images/Week3/N3 Primary Equipment Daily Availabilities - Week3.png',
+        src: '/images/Week3/N3 Weekly Availability Chart - week3.png',
         comment: 'Weekly average availability was 87.73%, exceeding the target. However, daily performance for DT and FL fleets showed some volatility.'
       },
       safety: { status: 'Concern', details: 'HT cable property damage in central sections.' },
@@ -168,41 +167,66 @@ export const reportData: ReportData = {
         { label: 'HD', percentage: 88.0, target: 85 },
         { label: 'RT', percentage: 87.0, target: 85 },
         { label: 'SR', percentage: 85.8, target: 85 },
-        { label: 'UV', percentage: 98.1, target: 85 },
+        { label: 'UV', percentage: 98.1, target: 85 }
       ],
       keyBreakdowns: [
         { equipment: 'DT', details: ["Cooling fan failures due to ore loading practices"] },
         { equipment: 'General', details: ["HT cable property damage"] }
       ]
-    }
-  },
-  bev: {
-    name: 'BEV Fleet',
-    availability: [
-      { label: 'DT BEV', value: 82, target: 85 },
-      { label: 'FL BEV', value: 78, target: 85 }
-    ],
-    serviceCompliance: [
-      { label: 'DT BEV', value: 85 }, // NOTE: Compliance data not in source, placeholder value used
-      { label: 'FL BEV', value: 85 }  // NOTE: Compliance data not in source, placeholder value used
-    ],
-    breakdowns: [
-      { equipment: 'D10147', details: ['Electrical Breakdown: Replace Split drive'] },
-      { equipment: 'FL0112', details: ['Electrical Breakdown: Bucket Problem - E/Bay (wait for parts), repairs on steering @ battery bay'] },
-      { equipment: 'FL0107', details: ['Strata system faulty', 'Multiple battery-related delays and changes'] }
-    ],
-    batteryThemes: [
-        'Critical unit D10147 (28% availability) down for split drive replacement.',
-        'Critical unit FL0112 (19% availability) down for bucket repairs.',
-        'Multiple battery and charging-related issues impacting FL0107.'
-    ]
-  },
-  shaftsAndWinders: {
-    tonsPerHour: { value: 354, target: 523 },
-    rwAvailability: { value: 95.2, target: 95 },
-    highlights: ['[PENDING] - Awaiting highlights for Shafts & Winders.'],
-    lowlights: ['[PENDING] - Awaiting lowlights for Shafts & Winders.'],
-    emergingIssues: ['[PENDING] - Awaiting emerging issues for Shafts & Winders.'],
-    priorities: ['[PENDING] - Awaiting priorities for Shafts & Winders.']
-  },
-};
+    },
+    bev: {
+      name: 'BEV Fleet',
+      availability: [
+        { label: 'DT BEV', value: 82, target: 85 },
+        { label: 'FL BEV', value: 78, target: 85 }
+      ],
+      serviceCompliance: [
+        { label: 'DT BEV', value: 50 },
+        { label: 'FL BEV', value: 100 }
+      ],
+      breakdowns: [
+        {
+          equipment: 'DT BEV',
+          details: [
+            'Top causes: Equipment/Breakdown Electrical (103.85 hrs).',
+            'Top machines: DT0147 (103.85 hrs - Replace Split drive).'
+          ]
+        },
+        {
+          equipment: 'FL BEV',
+          details: [
+            'Top causes: Equipment/Breakdown Electrical (81.42 hrs); Bucket repairs and battery bay delays (52.24 hrs).',
+            'Top machines: FL0112 (81.42 hrs), FL0107 (35.17 hrs), FL0108 (19.44 hrs).'
+          ]
+        }
+      ],
+      batteryThemes: [
+        'DT0147 at 28% availability - split drive replacement required.',
+        'FL0112 at 19% availability - bucket repairs and battery bay delays.',
+        'All chargers operational - focus on equipment electrical issues.'
+      ]
+    },
+    shaftsAndWinders: {
+      tonsPerHour: { value: 323, target: 523 },
+      rwAvailability: { value: 85.1, target: 100 },
+      highlights: [
+        'Two issues on Nch3 PW resolved in time and did not impact Shaft Schedule.',
+        'SolRock Progress for week No.4.',
+        'Movement with regards to Fitter and Rigger Positions.'
+      ],
+      lowlights: [
+        'Employee Engagement/Resignations - SGM addressing Culture Issues in Section.',
+        'Lamproom Findings Identified with DMPR Audit.'
+      ],
+      emergingIssues: [
+        'Low compliment of Fitters and Riggers in Mechanical Section still putting pressure on the Section.'
+      ],
+      priorities: [
+        'Nch2 Main Fan No.1 Impeller and Bearings Replacement.',
+        'Completing Fitter & Rigger Positions in Winder Mechanical Section.',
+        'Shaft Repair Work with Solrock Team_Weekend No.5.',
+        'Preparing for DMPR Audit/Visit (Thursday 24July2025).',
+        'Employee Engagement/Resignations - Culture Issues / Remedial Actions - Follow-Up Meeting 11Aug 2025.'
+      ]
+    },
+  };
