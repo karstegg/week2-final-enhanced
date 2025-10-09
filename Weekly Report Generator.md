@@ -36,7 +36,6 @@ The entire process is predicated on the user supplying the data for a given week
   * Key breakdown lists and reasons for performance deviations.  
   * Images for trend charts.  
 * **Process:** The application is a persistent React web app. The weekly workflow involves (1) updating the `src/data/reportData.ts` file with the new week's data, (2) reviewing the slides in the live web preview, and (3) using the built-in browser print functionality to export the final report as a PDF.
-
 ### **2.2. Component-Based Template**
 
 The report is built from a pre-defined set of React components. The generator must assemble these components to create the final report.
@@ -49,12 +48,11 @@ The report is built from a pre-defined set of React components. The generator mu
   * The KPI-driven Shafts & Winders performance slide.  
   * The image-based Weekly Availability Trend slides.  
   * The detailed Site Performance slides (for N3, N2, Gloria).  
+    * **New Standard Element:** Each site performance slide now includes a "Week Summary" footer banner that provides a concise, executive-level headline of the week's critical issues. This banner appears below the key breakdowns section and is styled with a blue accent border and light blue background.
   * The dedicated BEV Performance slide.  
 
 
 ### **2.3. Styling and Design**
-
-The visual identity of the report is critical and must be strictly adhered to.
 
 * **Styling Engine:** All styling must be implemented using **Tailwind CSS** utility classes. No other CSS methods should be used.  
 * **Iconography:** The **Lucide-React** library is the sole source for icons.  

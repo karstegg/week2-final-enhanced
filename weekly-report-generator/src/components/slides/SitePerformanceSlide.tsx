@@ -102,6 +102,11 @@ const SitePerformanceSlide: React.FC<SitePerformanceSlideProps> = ({ data, foote
             ))}
           </div>
         </div>
+        {data.trendChart.comment && (
+          <div className="mt-4 bg-blue-50 border-l-4 border-blue-500 p-3 rounded">
+            <p className="text-sm text-blue-800 font-medium italic">{data.trendChart.comment}</p>
+          </div>
+        )}
       </main>
       <Footer src={footerSrc} />
     </div>

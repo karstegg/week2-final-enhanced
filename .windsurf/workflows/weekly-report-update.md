@@ -20,7 +20,17 @@ This workflow orchestrates the entire weekly report update process, from data ex
 2.  **Run Consolidated Data Extraction:**
     *   Invoke the `/update-all-data-sources` workflow to extract data for all sites, which will handle the CSV-first logic and update `reportData.ts`.
 
-3.  **Data Integrity Check:**
+3.  **Generate Week Summary Headlines (MANDATORY):**
+    *   **For each site (Gloria, N2, N3):** Create a concise, executive-level summary headline (≤120 chars) that captures the week's critical issues.
+    *   **Add to `trendChart.comment` field** in `reportData.ts` for each site.
+    *   **Guidelines:**
+        *   Highlight persistent failures (e.g., "6 days unresolved")
+        *   Mention systematic issues (e.g., "Strata failures across 4 units")
+        *   Include severity indicators (e.g., "safety critical")
+        *   Reference specific equipment IDs for major issues
+    *   **Example:** `"Week Summary: Critical persistent failures on DT128 (6 days) and FL92 (6 days, Graben). Multiple Strata telemetry issues Oct 2-3."`
+
+4.  **Data Integrity Check:**
     *   **Verify File Path:** Before editing, confirm you are targeting `weekly-report-generator/src/data/reportData.ts`. An identically named file at the root `src/` must be ignored.
     *   **Check Component Logic:** If data appears correct in the file but renders incorrectly on a slide (e.g., is missing or truncated), the next step is to investigate the corresponding `.tsx` component file for hardcoded presentation logic (e.g., item limits).
 

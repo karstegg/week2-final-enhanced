@@ -26,4 +26,12 @@ This process requires **two separate terminals**.
     node capture-slides.js --verbose
     ```
 
-3.  **Verify**: Review the captured screenshots in the `weekly-report-generator/screenshots/review/` folder to confirm data accuracy and correct rendering. The files are named `slide-XX.png` (e.g., `slide-03.png`).
+3.  **Verify**: Review the captured screenshots in the `screenshots/review/` folder to confirm data accuracy and correct rendering. The files are named `slide-X.png`.
+
+4.  **Data Verification Checklist (Mandatory)**: Before concluding the review, you must perform the following data integrity checks based on the captured screenshots and the source-of-truth trend charts (`/public/images/WeekXX/`).
+
+    *   **[ ] Site Weekly Average vs. Trend Chart**: For each site (Gloria, N2, N3), confirm the `Weekly Avg.` percentage on the performance slide (e.g., Slide 6) **exactly** matches the final data point for the current week on the main trend line of the corresponding availability chart image.
+    *   **[ ] Fleet Availability vs. Trend Chart**: For each site, confirm the availability percentage for **every individual fleet** (DT, FL, HD, RT, SR) on the performance slide **exactly** matches the 'Weekly Average' value shown in the corresponding box on the availability chart image.
+    *   **[ ] Below-Target Justification**: For any fleet with an availability percentage below the **85% target**, confirm that a corresponding reason is listed under the 'Key Breakdowns / Issues' section on the slide.
+
+    If any of these checks fail, you must correct the data in `reportData.ts` and re-run this workflow until all checks pass.
