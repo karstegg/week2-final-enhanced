@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>August 2025 Engineering Safety: Lockout/Tagout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+            margin: 0;
+        }
+        .poster-container {
+            width: 250mm; /* B4 Size - between A4 and A3 */
+            min-height: 353mm;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-color: #f3f4f6; /* Light grey background */
+            display: flex;
+            flex-direction: column;
+        }
+        .hazard-stripes {
+            background: repeating-linear-gradient(
+                45deg,
+                #facc15,
+                #facc15 25px,
+                #1f2937 25px,
+                #1f2937 50px
+            );
+            height: 20px;
+        }
+        .energy-wheel-text {
+            font-size: 10px;
+            font-weight: bold;
+            fill: #fff;
+            text-anchor: middle;
+            text-transform: uppercase;
+        }
+        h1 {
+            word-spacing: 8px;
+        }
+         @media print {
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .poster-container {
+                box-shadow: none;
+                margin: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-300">
+    <div class="poster-container">
+        <!-- Header -->
+        <header>
+            <div class="hazard-stripes"></div>
+            <div class="bg-gray-800 p-6 text-white">
+                <div class="flex justify-between items-center">
+                    <h1 class="text-4xl font-black w-2/3">ALWAYS ISOLATE & LOCKOUT BEFORE WORK</h1>
+                    <div class="text-right">
+                        <div class="bg-teal-500 font-bold px-4 py-1">ENGINEERING</div>
+                        <div class="bg-white text-gray-800 font-bold px-4 py-1 mt-1">AUGUST 2025</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow p-8 grid grid-cols-2 gap-8 items-start">
+            <!-- Left Column -->
+            <div class="flex flex-col gap-8">
+                <!-- Visual -->
+                <div class="relative w-full h-96 flex items-center justify-center">
+                    <!-- Energy Wheel SVG -->
+                    <svg viewBox="0 0 200 200" class="absolute w-full h-full">
+                        <defs>
+                            <path id="circlePath" d="M 100, 100 m -85, 0 a 85,85 0 1,1 170,0 a 85,85 0 1,1 -170,0" />
+                        </defs>
+                        <!-- Segments -->
+                        <g transform="rotate(-30, 100, 100)">
+                            <circle r="50" cx="100" cy="100" fill="transparent" stroke="#3b82f6" stroke-width="100" stroke-dasharray="52.36 261.8" transform="rotate(0, 100, 100)" />
+                            <circle r="50" cx="100" cy="100" fill="transparent" stroke="#ef4444" stroke-width="100" stroke-dasharray="52.36 261.8" transform="rotate(60, 100, 100)" />
+                            <circle r="50" cx="100" cy="100" fill="transparent" stroke="#f97316" stroke-width="100" stroke-dasharray="52.36 261.8" transform="rotate(120, 100, 100)" />
+                            <circle r="50" cx="100" cy="100" fill="transparent" stroke="#8b5cf6" stroke-width="100" stroke-dasharray="52.36 261.8" transform="rotate(180, 100, 100)" />
+                            <circle r="50" cx="100" cy="100" fill="transparent" stroke="#10b981" stroke-width="100" stroke-dasharray="52.36 261.8" transform="rotate(240, 100, 100)" />
+                            <circle r="50" cx="100" cy="100" fill="transparent" stroke="#4f46e5" stroke-width="100" stroke-dasharray="52.36 261.8" transform="rotate(300, 100, 100)" />
+                        </g>
+                        <!-- Text Labels -->
+                        <g class="energy-wheel-text">
+                            <text><textPath xlink:href="#circlePath" startOffset="8.33%">ELECTRICAL</textPath></text>
+                            <text><textPath xlink:href="#circlePath" startOffset="25%">MECHANICAL</textPath></text>
+                            <text><textPath xlink:href="#circlePath" startOffset="41.66%">HYDRAULIC</textPath></text>
+                            <text><textPath xlink:href="#circlePath" startOffset="58.33%">PNEUMATIC</textPath></text>
+                            <text><textPath xlink:href="#circlePath" startOffset="75%">GRAVITY</textPath></text>
+                            <text><textPath xlink:href="#circlePath" startOffset="91.66%">THERMAL</textPath></text>
+                        </g>
+                    </svg>
+                    <div class="z-20 bg-white p-4 rounded-full shadow-2xl"><svg xmlns="http://www.w3.org/2000/svg" class="h-28 w-28 text-red-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v2H4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V10a2 2 0 00-2-2h-2V6a4 4 0 00-4-4zm-2 4V6a2 2 0 114 0v2H8zm2 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" /></svg></div>
+                    <div class="absolute z-10 -right-8 top-12 transform -rotate-15"><svg width="100" height="160" viewBox="0 0 100 160" class="drop-shadow-lg"><rect x="0" y="0" width="100" height="150" rx="5" fill="#DC2626"/><rect x="5" y="5" width="90" height="140" fill="none" stroke="white" stroke-width="2"/><circle cx="50" cy="20" r="8" fill="white"/><circle cx="50" cy="20" r="5" fill="#DC2626"/><rect x="15" y="35" width="70" height="30" fill="white"/><text x="50" y="55" font-family="Inter, sans-serif" font-size="16" fill="#DC2626" text-anchor="middle" font-weight="900">DANGER</text><text x="50" y="80" font-family="Inter, sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="bold">LOCKED</text><text x="50" y="95" font-family="Inter, sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="bold">OUT</text><rect x="15" y="110" width="70" height="25" fill="white"/></svg></div>
+                    <div class="absolute z-10 -left-10 bottom-12 transform rotate-12"><svg width="120" height="100" viewBox="0 0 120 100" class="drop-shadow-lg"><path d="M60 10 C 20 10, 20 90, 60 90" stroke="#B0B0B0" stroke-width="8" fill="none" stroke-linecap="round"/><path d="M60 10 C 100 10, 100 90, 60 90" stroke="#B0B0B0" stroke-width="8" fill="none" stroke-linecap="round"/><path d="M60 10 C 20 10, 20 90, 60 90" stroke="#D1D5DB" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M60 10 C 100 10, 100 90, 60 90" stroke="#D1D5DB" stroke-width="6" fill="none" stroke-linecap="round"/><rect x="5" y="45" width="55" height="10" fill="#DC2626" rx="2"/><circle cx="15" cy="50" r="3" fill="white"/><circle cx="25" cy="50" r="3" fill="white"/><circle cx="35" cy="50" r="3" fill="white"/></svg></div>
+                </div>
+                <!-- Quote -->
+                <div class="w-full text-center py-4 bg-white rounded-lg shadow-md">
+                    <p class="text-xl italic font-semibold text-gray-700">“No job is so urgent that it cannot be isolated safely.”</p>
+                </div>
+                <!-- Critical Reminders -->
+                <div class="w-full p-4 bg-red-100 border-l-8 border-red-500 rounded-lg shadow-md">
+                    <h3 class="text-xl font-black text-red-700 mb-2">CRITICAL REMINDERS</h3>
+                    <ul class="space-y-2 text-red-900 text-lg">
+                        <li class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" /></svg>NEVER interfere with or remove another person's lock.</li>
+                        <li class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" /></svg>NEVER use common or master keys for personal lockouts.</li>
+                    </ul>
+                </div>
+                <!-- Lock Removal Procedure -->
+                <div class="w-full p-4 bg-blue-100 border-l-8 border-blue-500 rounded-lg shadow-md">
+                    <h3 class="text-xl font-black text-blue-700 mb-2">LOCK REMOVAL AUTHORITY</h3>
+                     <div class="flex items-start text-blue-900">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                        <p class="text-lg">Only the responsible <strong>Engineer</strong> can give permission to remove a lock if the owner is absent, and only after all safety checks are complete.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="flex flex-col gap-8">
+                 <!-- Key Points -->
+                <div class="bg-white p-6 rounded-lg shadow-md flex-grow flex flex-col">
+                    <div class="absolute -top-12 -right-10"><svg width="120" height="120" viewBox="0 0 120 120"><g><path d="M 60,15 A 30,25 0 0,1 90,40 L 95,50 L 25,50 L 30,40 A 30,25 0 0,1 60,15 Z" fill="#FBBF24"/><rect x="40" y="50" width="40" height="50" fill="#3B82F6"/><circle cx="60" cy="50" r="15" fill="#FDE68A"/></g></svg></div>
+                    <h2 class="text-2xl font-black text-gray-800 mb-4 border-b-4 border-yellow-400 pb-2">TAKE NOTE OF THE FOLLOWING:</h2>
+                    <ul class="space-y-4 text-gray-700 text-lg">
+                        <li class="flex items-start"><svg class="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><div><strong>Plan & Document:</strong> Before work, complete the Isolation Record Book (IRB). Ensure all equipment is correctly labelled.</div></li>
+                        <li class="flex items-start"><svg class="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><div><strong>Isolate the Power Circuit:</strong> Lock out the main power source, not the control circuit, to prevent accidental start-up.</div></li>
+                        <li class="flex items-start"><svg class="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><div><strong>Check for Secondary Energy:</strong> Be aware of ring feeds, back-feeds, or interconnected systems that could energize the equipment.</div></li>
+                        <li class="flex items-start"><svg class="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><div><strong>Dissipate Stored Energy:</strong> Safely release or restrain all residual energy (e.g., bleed, vent, block, discharge).</div></li>
+                        <li class="flex items-start"><svg class="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><div><strong>Verify Zero Energy:</strong> Always test the equipment to confirm the isolation is effective before you touch any components.</div></li>
+                        <li class="flex items-start"><svg class="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><div><strong>Your Lock, Your Life:</strong> Each person must apply their own lock. For team jobs, use hasps (calipers) to secure the isolation point.</div></li>
+                        <li class="flex items-start"><svg class="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><div><strong>Attach Your Tag:</strong> Ensure your personal tag with your name, trade, and contact details is attached to your lock.</div></li>
+                        <li class="flex items-start"><svg class="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><div><strong>Last On, First Off:</strong> The person in charge of the work is the last to remove their lock, and only after all guards are replaced and the area is safe.</div></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="mt-auto">
+            <div class="bg-gray-800 text-white p-4 text-center">
+                <p class="text-lg font-bold">Need a Lockout / LOTO refresher?</p>
+                <p class="text-md">Contact the <span class="font-extrabold tracking-wide">BRMO Training Centre</span> to book.</p>
+            </div>
+            <div class="hazard-stripes"></div>
+            <div class="bg-white p-2 flex justify-end">
+                 <div class="text-xs text-gray-500 font-bold">COMPANY LOGO</div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -155,7 +155,7 @@ export const reportData: ReportData = {
     n3: {
       name: 'Nchwaning 3',
       trendChart: {
-        src: '/images/Week3/N3 Weekly Availability Chart - week3.png',
+        src: '/images/Week3/N3 Weekly Availability Chart - Week3.png',
         comment: 'Weekly average availability was 87.73%, exceeding the target. However, daily performance for DT and FL fleets showed some volatility.'
       },
       safety: { status: 'Concern', details: 'HT cable property damage in central sections.' },
@@ -173,8 +173,9 @@ export const reportData: ReportData = {
         { equipment: 'DT', details: ["Cooling fan failures due to ore loading practices"] },
         { equipment: 'General', details: ["HT cable property damage"] }
       ]
-    },
-    bev: {
+    }
+  },
+  bev: {
       name: 'BEV Fleet',
       availability: [
         { label: 'DT BEV', value: 82, target: 85 },
@@ -205,10 +206,13 @@ export const reportData: ReportData = {
         'FL0112 at 19% availability - bucket repairs and battery bay delays.',
         'All chargers operational - focus on equipment electrical issues.'
       ]
-    },
-    shaftsAndWinders: {
+  },
+  shaftsAndWinders: {
+    production: {
       tonsPerHour: { value: 323, target: 523 },
-      rwAvailability: { value: 85.1, target: 100 },
+      rockWinderAvailability: { value: 85.1, target: 95 }
+    },
+    heal: {
       highlights: [
         'Two issues on Nch3 PW resolved in time and did not impact Shaft Schedule.',
         'SolRock Progress for week No.4.',
@@ -228,5 +232,6 @@ export const reportData: ReportData = {
         'Preparing for DMPR Audit/Visit (Thursday 24July2025).',
         'Employee Engagement/Resignations - Culture Issues / Remedial Actions - Follow-Up Meeting 11Aug 2025.'
       ]
-    },
-  };
+    }
+  }
+};

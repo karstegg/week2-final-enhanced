@@ -1,0 +1,18 @@
+Date;Delay code;Delay comment;Duration (minutes);Equipment
+20-Aug-25;/Equipment/Breakdown Fitter;drifter bolt @w/place 9W          ; 51              ;HD0048
+20-Aug-25;/Equipment/Breakdown Fitter;left drifter smoke @74 w/place          ; 200              ;HD0060
+20-Aug-25;/Equipment/Breakdown Fitter;hydr hose @92w 120n          ; 36              ;HD0066
+20-Aug-25;/Equipment/Breakdown Fitter/Rock Drilling System / Drifter/Shank;SHANK BROKEN @131W/111N 74 SECTION          ; 39              ;HD0066
+20-Aug-25;/Equipment/Breakdown Electrical;not switching on@98e125s          ; 35              ;RT0045
+20-Aug-25;/Equipment/Breakdown Fitter;prop shaft @128w111n          ; 1440              ;RT0046
+21-Aug-25;/Equipment/Breakdown Fitter/Water System/Water box;waterbox bolts          ; 48              ;HD0048
+21-Aug-25;/Equipment/Breakdown Fitter;water hose reel@ 74w/place          ; 316              ;HD0059
+21-Aug-25;/Equipment/Breakdown Fitter;drifter @127s          ; 256              ;HD0060
+21-Aug-25;/Equipment/Breakdown Fitter;          ; 123              ;HD0060
+21-Aug-25;/Equipment/Breakdown Fitter/Rock Drilling System / Drifter;          ; 897              ;HD0060
+21-Aug-25;/Equipment/Breakdown Electrical/Auto Electrical System - 24v;not starting @w/place          ; 14              ;HD0060
+21-Aug-25;/Equipment/Breakdown Fitter;loose hyd hose @ 127s          ; 20              ;HD0066
+21-Aug-25;/Equipment/Breakdown Mechanical/Hydraulic System/Hoses;@ 127s98e          ; 40              ;HD0066
+21-Aug-25;/Equipment/Breakdown Electrical;          ; 47              ;HD0066
+21-Aug-25;/Equipment/Breakdown Mechanical/Chassis/Fire Suppression;fire suppression pin @101s          ; 407              ;RT0045
+21-Aug-25;/Equipment/Breakdown Fitter;prop shaft @128w111n          ; 654              ;RT0046

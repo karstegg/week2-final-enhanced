@@ -1,0 +1,24 @@
+﻿Type,Machine_id,All Delays Levels,Comment,Hours
+DTe,DT0150,/Equipment/Breakdown Electrical,OVERHEATING @ BATTERY BAY,144.00
+DTe,DT0171,/Equipment/Breakdown Electrical,HYDRAULIC OIL LEAK@BATTERY BAY.,144.00
+DTe,DT0149,/Equipment/Breakdown Electrical,Front camera installation@BATTERY BAY,61.58
+DTe,DT0149,/Equipment/Breakdown Mechanical/Hydraulic System,HYDRAULIC SYSTEM OVER HEATING @BATTERY BAY.,17.13
+DTe,DT0147,/Equipment/Breakdown Mechanical,No Tailgate movement- Bbay,9.65
+DTe,DT0147,/Equipment/Operational Delays/Battery,CHANGE BATTERY,5.37
+DTe,DT0162,/Equipment/Operational Delays,SECTION 54,4.28
+DTe,DT0147,/Equipment/Operational Delays,SECTION 54,4.18
+DTe,DT0163,/Equipment/Operational Delays,SECTION 54,3.13
+DTe,DT0146,/Equipment/Operational Delays,SECTION 54,2.97
+DTe,DT0162,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown,strata system faulty @ battery bay,2.88
+DTe,DT0149,/Equipment/Operational Delays,SECTION 54.,2.82
+DTe,DT0163,/Equipment/Breakdown Mechanical/Chassis /Seat,Seat @ battery bay,2.22
+DTe,DT0149,/Equipment/Breakdown Mechanical,Camera @ battery bay,2.20
+DTe,DT0146,/Equipment/Operational Delays/Battery/Flat Battery,battery charging,2.03
+DTe,DT0149,/Equipment/Breakdown Mechanical,blind spot camera @ battery bay,1.30
+DTe,DT0163,/Equipment/Operational Delays/Battery,CHANGING BATTERY.,0.80
+DTe,DT0162,/Equipment/Operational Delays/Battery,CHANGING BATTERY.,0.68
+DTe,DT0146,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/Petro Man,tag box faulty @ battery bay,0.50
+DTe,DT0146,/Equipment/Operational Delays/No Operator,"",0.48
+DTe,DT0162,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/Petro Man,tag box faulty @ battery bay,0.48
+DTe,DT0162,/Equipment/Operational Delays,CHANGING BATTERY.,0.45
+DTe,DT0146,/Equipment/Operational Delays,CHANGE BATTERY.,0.22

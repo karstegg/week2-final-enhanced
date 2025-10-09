@@ -1,0 +1,16 @@
+﻿Type,Machine_id,All Delays Levels,Comment,Hours
+FLe,FL0108,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,No connecting Modules- Batt Bay,55.92
+FLe,FL0112,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,Air con faulty @Batt Bay,53.45
+FLe,FL0112,/Equipment/Breakdown Electrical/Auto Electrical System - 24v/Air Conditioner,AIRCON FAULTY@BATTERY BAY.,12.88
+FLe,FL0107,/Equipment/Operational Delays/Battery/Flat Battery,CHARGING BATTERY.,5.87
+FLe,FL0107,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown,strata system faulty @ battery bay,5.07
+FLe,FL0113,/Equipment/Operational Delays,SECTION 54,4.20
+FLe,FL0108,/Equipment/Operational Delays/No Operator,"",4.13
+FLe,FL0107,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,Batt not connecting- BBay,3.28
+FLe,FL0112,/Equipment/Breakdown Electrical/Auto Electrical System - 24v/Air Conditioner,"AIRCON NOT WORKING,REAR RED AND BLUE LIGHT NOT WORKING@BATTERY BAY.",3.27
+FLe,FL0099,/Equipment/Breakdown Electrical,RED ENGINE WARNING SIGN@S2S 69W,2.35
+FLe,FL0098,/Equipment/Operational Delays/No Operator,"",2.18
+FLe,FL0113,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown,MAINTENANCE ON STRATA,2.08
+FLe,FL0112,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,Batt not connecting- Batt Bay,1.02
+FLe,FL0107,/Equipment/Operational Delays/Battery/Flat Battery,Batt not connecting- BBay,0.83
+FLe,FL0107,/Equipment/Operational Delays/No Operator,"",0.27

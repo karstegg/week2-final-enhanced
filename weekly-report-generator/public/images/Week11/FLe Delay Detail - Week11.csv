@@ -1,0 +1,23 @@
+﻿Type,Machine_id,All Delays Levels,Comment,Hours
+FLe,FL0112,/Equipment/Breakdown Boilermaker,HALF ARROWS @ BOILERSHOP,28.43
+FLe,FL0098,/Equipment/Breakdown Mechanical/Hydraulic System/Hoses,'@ battery bay - leaks,17.55
+FLe,FL0108,/Equipment/Breakdown Electrical,MACINE IS CUTTING OFF WHEN OPERATING @ BATTERY BAY,16.98
+FLe,FL0098,/Equipment/Breakdown Electrical/Auto Electrical System - 24v/Strata Breakdown,SEAM 2 PARKING,13.08
+FLe,FL0107,/Equipment/Operational Delays/Battery/Flat Battery,charging,10.40
+FLe,FL0108,/Equipment/Operational Delays/Battery/Flat Battery,charging,10.20
+FLe,FL0112,/Equipment/Operational Delays/Battery/Flat Battery,charging,7.33
+FLe,FL0098,/Equipment/Operational Delays/Battery/Flat Battery,charging,6.42
+FLe,FL0098,/Equipment,STRATA MAINTENACE - OPERATOR IS TEST IN MACHINE WITH STRATA TECH @ S2 PARKING,5.53
+FLe,FL0113,/Equipment/Operational Delays/Battery/Flat Battery,charging,4.65
+FLe,FL0107,/Equipment/Operational Delays/Battery/Flat Battery,CHARGE BATTERY,3.73
+FLe,FL0098,/Equipment/Operational Delays/Battery/Flat Battery,CHARGE.,3.72
+FLe,FL0098,/Equipment/Breakdown Electrical/Auto Electrical System - 24v/Traveling Lights,'@ BATTERY BAY,3.67
+FLe,FL0107,/Equipment/Operational Delays,changing,3.63
+FLe,FL0113,/Equipment/Breakdown Electrical,machine cutting off @ R5 41W 62S,3.48
+FLe,FL0107,/Equipment/Operational Delays/Battery/Flat Battery,'@ battery bay - charging,1.60
+FLe,FL0107,/Equipment/Operational Delays/Battery,Batt Flat,1.30
+FLe,FL0113,/Equipment/Operational Delays/Battery/Flat Battery,CHARGE,1.15
+FLe,FL0113,/Equipment/Operational Delays/Battery,charging,0.93
+FLe,FL0113,/Equipment/Operational Delays,GREASE MACHINE  AND BATTERY CHANGE,0.65
+FLe,FL0113,/Equipment/Breakdown Electrical/Auto Electrical System - 800v/800v Battery,FAIL TO START BECAUSE OF BATTERY CONNECTION @ EXIT OF BATTERY BAY,0.48
+FLe,FL0098,/Equipment/Operational Delays,CHANGE BATTERY,0.23
