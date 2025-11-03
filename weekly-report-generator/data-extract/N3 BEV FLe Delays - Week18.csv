@@ -1,0 +1,15 @@
+FLe,FL0098,/Equipment/Operational Delays/Battery/Flat Battery,CHARGING BATTERY.,40.48
+FL0099,/Equipment/Operational Delays,CHANGE BATTERY,0.23
+/Equipment/Operational Delays/Battery,CHANGE BATTERY.,0.12
+/Equipment/Operational Delays/Battery/Flat Battery,0.43
+battery charging,4.12
+Change Batt,1.63
+FL0107,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown,@43N MAIN DRIVE,4.17
+/Equipment/Breakdown Mechanical,transmission calibration @ battery bay,0.73
+FL0108,/Equipment/Breakdown Mechanical,red stop lamp @ battery bay,0.63
+/Equipment/Operational Delays/Battery/Flat Battery,battery charging,0.78
+CHARGING BATTERY.,1.43
+FL0112,/Equipment/Breakdown Boilermaker,Half Arrows + Belly Plate Liners@Boilershop,3.77
+FL0113,/Equipment/Breakdown Boilermaker,"Weld half arrows, corners and center peace (w/s)",51.82
+/Equipment/Operational Delays/Battery/Flat Battery,Charge Battery,1.62
+CHARGING BATTERY.,0.98

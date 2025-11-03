@@ -1,0 +1,25 @@
+Highlights
+• Production Output
+• Planned production output has shown significant improvement compared to previous weeks and months in FY 25/26.
+• LD Reliability
+• LD’s reliability is trending positively, indicating stable operational performance.
+• Audit & Compliance
+• All priority DMPR and Fire Audit actions have been addressed, and corresponding job cards are closed.
+• Safety Incident
+• Section 11.5 of the finger injury (LTI) incident report has been completed and is ready for submission for review.
+
+Lowlights
+• Overall KPI performance for the week was below expectations.
+• Concerns about Epiroc’s quality of work on machines delivered to site.
+
+Emerging Issues
+• OEM resource strain: CAS L9 deadline approaching, causing longer lead times and difficulty managing daily operations (affecting BWE, Strata, Deutz).
+• Workforce attendance: Overall poor attendance, averaging below 85% for the week.
+• BEV issues: DT failures related to the motor and dropbox oil leak (specifically DT 0162 and DT 0171).
+
+Priorities
+• Adherence to Schedule
+• Communicate consequences for repeated non-compliance.
+• Work Attendance
+• Review attendance records weekly and address root causes
+• Review Acting Roles to Improve KPIs

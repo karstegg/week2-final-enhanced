@@ -1,0 +1,29 @@
+DTe,DT0146,/Equipment/Breakdown Electrical,ENGINE CUT OFF @ MW STRAIGHT 81S,1.65
+MACHINE IS CUTTING OFF (ENGINE CUT OFF) @ NW 21W 109S,15.12
+/Equipment/Operational Delays,CHANGE BATTERY,0.23
+/Equipment/Operational Delays/Battery,CHANGE BATTERY.,0.43
+CHANGING BATTERY.,0.50
+/Equipment/Operational Delays/Battery/Flat Battery,CHANGE BATTERY,1.45
+DT0147,/Equipment/Breakdown Electrical,RED STOP LAMP@BATTERY BAY.,0.80
+/Equipment/Breakdown Electrical/Auto Electrical System - 24v/24v Battery,"battery cut off @ swd,49s",8.63
+Battery not connecting,1
+/Equipment/Breakdown Electrical/Auto Electrical System - 24v/Strata Breakdown,Strata - Battery bay,1.52
+/Equipment/Operational Delays/Battery,CHANGING BATTERY.,0.18
+DT0149,/Equipment/Breakdown Electrical/Auto Electrical System - 24v/Strata Breakdown,Strata - Battery bay,1.73
+/Equipment/Operational Delays/Battery,"CHANGE BATTERY,",0.23
+CHANGE BATTERY.,0.98
+/Equipment/Operational Delays/Battery/Flat Battery,TESTING BATTERY BEFORE CHANGING FOR EXCESSIVE POWER DRAINAGE.,15.63
+DT0150,/Equipment/Breakdown Electrical/Auto Electrical System - 24v/Strata Breakdown,@ battery bay,0.37
+Strata - Battery bay,1.52
+/Equipment/Breakdown Mechanical,Oil Leak@Batt Bay,37.23
+/Equipment/Operational Delays,CHANGE BATTERY,0.08
+/Equipment/Operational Delays/Battery,CHANGE BATTERY.,0.10
+/Equipment/Operational Delays/Battery/Flat Battery,Charging,1.87
+DT0162,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown,STRATA (parking bay,5.02
+/Equipment/Breakdown Electrical/Auto Electrical System - 24v/Strata Breakdown,Strata - Battery bay,2.47
+/Equipment/Breakdown Mechanical,Rear traction motor temperature not working 2 battery bay,36.87
+"Red stop lamp @ R5,49s",2.60
+/Equipment/Breakdown Mechanical/Brake System,@ battery bay,1.22
+/Equipment/Operational Delays/Battery,CHANGE BATTERY.,2.37
+DT0163,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown,B1 COMMS FAILURE @31W/109S NW,1.43
+/Equipment/Operational Delays/Battery/Flat Battery,Charging,0.70
