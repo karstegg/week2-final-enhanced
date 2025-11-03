@@ -73,7 +73,7 @@ export const reportData: ReportData = {
       { src: '/images/AD30.png', alt: 'AD30 Dump Truck', className: 'absolute top-[35%] -translate-y-1/2 left-[5%] w-[40%] transform transition-transform hover:scale-105' },
       { src: '/images/ST14.png', alt: 'ST14', className: 'absolute top-[35%] -translate-y-1/2 right-[5%] w-[40%] transform transition-transform hover:scale-105' },
       { src: '/images/S2.png', alt: 'S2', className: 'absolute top-[70%] -translate-y-1/2 left-[5%] w-[40%] transform transition-transform hover:scale-105' },
-      { src: '/images/MT42B.png', alt: 'MT42B', className: 'absolute top-[70%] -translate-y-1/2 right-[5%] w-[40%] transform transition-transform hover:scale-105' },
+      { src: '/images/Winder.png', alt: 'Winder - Shafts & Winders', className: 'absolute top-[70%] -translate-y-1/2 right-[5%] w-[40%] transform transition-transform hover:scale-105' },
       { src: '/images/cover-logo.png', alt: 'Logo', className: 'absolute top-[88%] left-1/2 -translate-x-1/2 w-1/4' }
     ],
   },
@@ -81,23 +81,23 @@ export const reportData: ReportData = {
   heal: {
     highlights: [
       { site: 'Gloria', text: 'UV0128 Level 9 commissioning completed.' },
-      { site: 'N2', text: 'FL availability above 85%.' },
-      { site: 'N3', text: 'HD, RT, SR performing well (92.6%, 94.2%, 91.8%); FL BEV at 97%.' },
+      { site: 'N3', text: 'HD, RT, SR performing well (96%, 97%, 97%); FL BEV at 97%.' },
     ],
     lowlights: [
-      { site: 'Gloria', text: 'DT availability 79%; RT at 76% (RT0046 carousel damage, RT0045 compressor).' },
-      { site: 'N2', text: 'DT availability 77% (DT121 gears, DT128 torque converter, DT120 aircon).' },
+      { site: 'Gloria', text: 'DT0153 belly plate damage; Production 30% below target; RT at 80% (RT0046 carousel damage).' },
+      { site: 'N2', text: 'Vent door damaged Strata proxmod; Compressor failure; DT availability 80%.' },
       { site: 'N3', text: 'DT-Diesel 85%, FL-Diesel 74% (FL82 scrapped, FL91 fire suppression); DT BEV 67%; 65CV01 belt torn 260m.' },
     ],
     emergingIssues: [
       { site: 'Gloria', text: 'Stores shortage: carousel and RT transmission parts unavailable.' },
-      { site: 'N2', text: 'Illumination test failures (all scalers); parts delivery delays from stores.' },
-      { site: 'N3', text: 'DT171 A-frame bearing damaged (parts at workshop); Battery disconnect audit ongoing.' },
+      { site: 'N2', text: 'Barlows support required; Illumination test failures (all scalers).' },
+      { site: 'N3', text: 'DT171 A-frame bearing damaged (parts at workshop); EMI on BEV.' },
     ],
     priorities: [
       { site: 'Gloria', text: 'DT0153 transport to Broncho for line boring; Aard & Fermel CAS L9 implementation.' },
       { site: 'N2', text: '3rd party brake testing; FL100 investigation (03 Nov); LDO587 brake testing.' },
-      { site: 'N3', text: 'Nerospec CAS implementation; Battery audit; regenerative braking override audit; S2 project support.' },
+      { site: 'N3', text: 'EMI test report actions; Nerospec CAS implementation; Battery audit; S2 project support.' },
+      { site: 'All Sites', text: 'CAS L9 implementation for all support equipment.' },
     ],
   },
   shaftsAndWinders: {
@@ -135,7 +135,7 @@ export const reportData: ReportData = {
         src: '/images/Week18/Gloria Weekly Availability Chart Week18.png',
         comment: 'Week Summary: DT 80%; FL 89%; RT 80% (carousel, compressor); Overall 88%.',
       },
-      safety: { status: 'Good', details: '' },
+      safety: { status: 'Incident', details: 'DT0153 belly plate damage (property damage)' },
       weeklyAverage: { value: 88, target: 85 },
       serviceCompliance: { status: 'Good', details: 'FL, HD, RT, Support Equip at 100%.' },
       availability: [
@@ -156,7 +156,7 @@ export const reportData: ReportData = {
         src: '/images/Week18/N2 Weekly Availability Chart Week18.png',
         comment: 'Week Summary: DT 80%; FL 81%; Overall 88%.',
       },
-      safety: { status: 'Good', details: '' },
+      safety: { status: 'Incident', details: 'Vent door damaged Strata proxmod (property damage)' },
       weeklyAverage: { value: 88, target: 85 },
       serviceCompliance: { status: 'Issues', details: 'FL, HD, RT at 100%; DT at 33% (DT128, DT121 breakdowns); Support Equip 6%.' },
       availability: [
@@ -168,6 +168,7 @@ export const reportData: ReportData = {
       ],
       keyBreakdowns: [
         { equipment: 'DT', details: ['DT121 park brake and gears; DT128 torque converter; DT120 aircon'] },
+        { equipment: 'FL', details: ['FL106 upbox; FL102 seat; FL87 powerless; FL66 seat'] },
       ],
     },
     n3: {
@@ -206,23 +207,23 @@ export const reportData: ReportData = {
       {
         equipment: 'DT BEV',
         details: [
-          'Top causes: Strata battery bay issues (DT0146, DT0147, DT0149, DT0150, DT0162, DT0163); Rear traction motor temp sensor (DT0162, 36.9 hrs); Oil leak (DT0150, 37.2 hrs).',
-          'Top machines: DT0162 (Strata/motor/brake, 48.2 hrs); DT0150 (Strata/oil leak, 41.2 hrs); DT0147 (battery/Strata, 11.6 hrs).'
+          'Top causes: Strata faults (DT0146, DT0149, DT0150, DT0162, DT0163); Battery connection issues (DT0147, 9.6 hrs); Brake system/regenerative braking (DT0162, 8.9 hrs).',
+          'Top machines: DT0146 (battery cut-off, 15.1 hrs); DT0150 (junction block valve, 37.2 hrs); DT0162 (brake/regen braking, 8.9 hrs).'
         ]
       },
       {
         equipment: 'FL BEV',
         details: [
-          'Top causes: Half arrows boilermaker (FL0113, 51.8 hrs); Flat battery charging (FL0098, 40.5 hrs); Strata faults (FL0107, 4.9 hrs).',
-          'Top machines: FL0113 (half arrows, 51.8 hrs); FL0098 (battery charging, 40.5 hrs); FL0112 (half arrows, 3.8 hrs).'
+          'Top causes: Half arrows boilermaker (FL0113, 51.8 hrs; FL0112, 3.8 hrs); Strata faults (FL0107, 4.9 hrs); Mechanical issues (FL0108, 0.6 hrs).',
+          'Top machines: FL0113 (half arrows, 51.8 hrs); FL0107 (Strata, 4.9 hrs); FL0112 (half arrows, 3.8 hrs).'
         ]
       }
     ],
     batteryThemes: [
-      'Charger 7 & 8: 1 module each tripping mini sub-breaker; operating at 75% capacity.',
-      'CCS connector cables (Posts 3, 6, 7) need replacement; upgraded spring set on order.',
-      'Charger/battery inlet connector wear causing charging stops; DCDC campaign to start.',
-      'Battery ratio: 10 ST14-B4 (1.6 ratio); 12 MT42-B5 (above 1.6 ratio); VPY00088 breakdown.',
+      'Charger 7 & 8: 1 module each tripping mini sub-breaker; charging at 75% capacity.',
+      'CCS connector cables (Posts 3, 6, 7) need replacement; new 300A cables received, upgraded spring set on order.',
+      'Charger/battery inlet connector wear causing charging stops; DCDC campaign to kick off once technicians onboarded.',
+      'Battery ratio: 10 ST14-B4 (1.6 ratio); 12 MT42-B5 (above 1.6 ratio); VPY00088 breakdown (spare parts at BR).',
     ],
   },
 };

@@ -91,7 +91,7 @@ const BevPerformanceSlide: React.FC<BevPerformanceSlideProps> = ({ data, footerS
             ))}
           </div>
         </div>
-        <div className="flex-grow overflow-hidden pr-2 text-sm mt-3">
+        <div className="flex-grow overflow-hidden pr-2 text-xs mt-3">
           <h3 className="text-xl font-bold mb-1 text-center">Key BEV & Battery Themes</h3>
           <div className="grid grid-cols-2 gap-x-6">
             <div>

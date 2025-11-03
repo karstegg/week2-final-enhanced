@@ -13,14 +13,28 @@ This workflow orchestrates the entire weekly report update process, from data ex
 
 ### **Phase 2: Automated Data Extraction**
 
-1.  **Confirm Source Files (PDF-First for BEV):**
-    *   **For BEV Data:** Prioritize the Epiroc PDF report (`BRMO weekly report...`) as the primary source for breakdowns and battery/charger themes. Use CSV data to supplement information for days not covered by the PDF (typically Friday-Sunday).
+1.  **Confirm Source Files (Data Source Hierarchy):**
+    *   **For Equipment Availability:** Trend chart images are ground truth. CSVs provide daily detail. Daily production reports provide operational context.
+    *   **For BEV Data:** Prioritize the Epiroc weekly BEV report (`.md` format) as the primary source for breakdowns and battery/charger themes. Use CSV data for availability percentages.
     *   **For Other Sites:** Use CSV files in `weekly-report-generator/data-extract/` as the primary source of truth. If CSVs are not present, fall back to report images in `public/images/Week<N>/`.
+    *   **For HEAL Data:** Daily production reports provide critical issues and themes. HEAL PowerPoints/text files provide structured HEAL data.
 
 2.  **Run Consolidated Data Extraction:**
     *   Invoke the `/update-all-data-sources` workflow to extract data for all sites, which will handle the CSV-first logic and update `reportData.ts`.
 
-3.  **Generate Week Summary Headlines (MANDATORY):**
+3.  **Create Weekly Executive Summary (NEW - MANDATORY):**
+    *   Invoke the `/create-weekly-executive-summary` workflow to generate executive summary from daily production reports.
+    *   **Location:** `C:\Users\10064957\My Drive\GDVault\ProductionData\daily_production\data\YYYY-MM\`
+    *   **Purpose:** Extract critical issues, safety incidents, and production insights for HEAL and performance slides.
+    *   **Output:** Markdown document with actionable recommendations for weekly report updates.
+
+4.  **Validate BEV Data with Epiroc Report (MANDATORY):**
+    *   Cross-check BEV breakdowns and battery themes with Epiroc weekly BEV report.
+    *   Verify daily exceptions match breakdown hours in reportData.ts.
+    *   Ensure battery themes include delivery status and timing details.
+    *   Update reportData.ts if discrepancies found.
+
+5.  **Generate Week Summary Headlines (MANDATORY):**
     *   **For each site (Gloria, N2, N3):** Create a concise, executive-level summary headline (≤120 chars) that captures the week's critical issues.
     *   **Add to `trendChart.comment` field** in `reportData.ts` for each site.
     *   **Guidelines:**
@@ -30,7 +44,7 @@ This workflow orchestrates the entire weekly report update process, from data ex
         *   Reference specific equipment IDs for major issues
     *   **Example:** `"Week Summary: Critical persistent failures on DT128 (6 days) and FL92 (6 days, Graben). Multiple Strata telemetry issues Oct 2-3."`
 
-4.  **Data Integrity Check:**
+6.  **Data Integrity Check:**
     *   **Verify File Path:** Before editing, confirm you are targeting `weekly-report-generator/src/data/reportData.ts`. An identically named file at the root `src/` must be ignored.
     *   **Check Component Logic:** If data appears correct in the file but renders incorrectly on a slide (e.g., is missing or truncated), the next step is to investigate the corresponding `.tsx` component file for hardcoded presentation logic (e.g., item limits).
 
