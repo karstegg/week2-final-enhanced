@@ -27,7 +27,7 @@ const SitePerformanceSlide: React.FC<SitePerformanceSlideProps> = ({ data, foote
     if (value >= target) {
       return { card: 'bg-green-50 border-green-200', text: 'text-green-700', targetText: 'text-green-500' };
     }
-    if (value >= target - 2) {
+    if (value >= target - 5) {
       return { card: 'bg-yellow-50 border-yellow-200', text: 'text-yellow-700', targetText: 'text-yellow-500' };
     }
     return { card: 'bg-red-50 border-red-200', text: 'text-red-700', targetText: 'text-red-500' };

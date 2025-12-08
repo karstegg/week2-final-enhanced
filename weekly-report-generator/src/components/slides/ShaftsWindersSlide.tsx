@@ -66,7 +66,7 @@ const ShaftsWindersSlide: React.FC<ShaftsWindersSlideProps> = ({ data, footerSrc
         </div>
 
         {/* HEAL Matrix */}
-        <div className="w-full px-12 mt-2" style={{ height: '520px' }}>
+        <div className="w-full px-12 mt-2" style={{ height: '390px' }}>
           <div className="grid grid-cols-2 gap-4" style={{ gridTemplateRows: '1fr 1fr' }}>
             <div className="bg-green-50 border border-green-200 rounded-lg p-4 flex flex-col overflow-hidden">
               <div className="flex items-center mb-1 flex-shrink-0">

@@ -1,0 +1,8 @@
+Fleet,Planned,Actual,Compliance,Target,Compliance %,Reasons for Non-Compliance
+DT,2,2,1,1,100.0%,
+FL,3,3,1,1,100.0%,"FL0087 After service strata replaced flasher from, mudule error"
+HD,4,3,0.75,1,75.0%,HD0063 service weekend
+RT,2,2,1,1,100.0%,
+SR - Service Compliance,1,1,1,1,100.0%,
+Support Equipment,8,8,1,1,100.0%,
+SR - Weekly Inspection ,8,8,1,1,100.0%,

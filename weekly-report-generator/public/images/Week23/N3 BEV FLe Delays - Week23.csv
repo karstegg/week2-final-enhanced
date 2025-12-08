@@ -1,0 +1,22 @@
+FLe,FL0098,/Equipment/Breakdown Electrical,insolation system faulty@57w4n S2S,0.78
+/Equipment/Breakdown Electrical/Control Systems/Modules,Modules 83e 36s s2s,1.03
+/Equipment/Breakdown Mechanical,error invertor @ r5 54s42w,3.68
+no movement @ 54s42w r5,2.55
+/Equipment/Operational Delays/Battery/Flat Battery,Charging,0.47
+CHARGING BATTERY.,2.13
+FL0099,/Equipment/Breakdown Mechanical/Brake System/Service Brake,FAILED BRAKE TEST@BATTERY BAY.,0.92
+/Equipment/Breakdown Tyre Bay/Chassis/Tyres,PUNCTURE NON-CAB SIDE (RIGHT) FRONT@BATTERY BAY.,4.33
+/Equipment/Operational Delays/Battery/Flat Battery,Charging,18.52
+CHARGING BATTERY.,1.93
+FL0107,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown,60n52w swd,2.78
+/Equipment/Breakdown Mechanical/Power Train/Gears,60n52w swd,2.78
+/Equipment/Operational Delays/Battery/Flat Battery,CHANGING BATTERY.,1.65
+FL0108,/Equipment/Operational Delays/Battery/Flat Battery,Charging,10.22
+CHARGING BATTERY.,3.67
+FL0112,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown,@NW 16w102s,3
+/Equipment/Breakdown Tyre Bay/Chassis/Tyres,REPLACE REAR TYRES@TYRE BAY,14.80
+/Equipment/Operational Delays/Battery/Flat Battery,Charging,5.90
+FL0113,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown,Strata System faulty @ battery bay,1.22
+/Equipment/Breakdown Electrical,FIRE SUPPRESION WARNING@BATTERY BAY.,3.20
+/Equipment/Breakdown Tyre Bay/Chassis/Tyres,CHANGE TYRE@TYRE BAY,4.55
+/Equipment/Operational Delays/Battery/Flat Battery,battery not charging,2.03

@@ -11,6 +11,7 @@ if (!fs.existsSync(outputDir)) {
   const page = await browser.newPage();
   await page.setCacheEnabled(false);
   await page.goto('http://localhost:5173', { waitUntil: 'networkidle0' });
+  await page.reload({ waitUntil: 'networkidle0' });
   await page.setViewport({ width: 1920, height: 1080 });
 
   await page.waitForSelector('#root:not(:empty)');

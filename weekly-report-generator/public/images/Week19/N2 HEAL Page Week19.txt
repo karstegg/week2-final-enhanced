@@ -1,0 +1,14 @@
+Highlights
+• 47 TMM tested on Thursday (06 Nov) by 3rd party for quarterly brake testing
+
+Emerging Issues
+• I am struggling to log into JDE Appshare to complete my job cards. I have logged request for assistance with IT
+• Repetetive breakdowns on DT121 (moving out of gear, not releasing park brake, overspeeding)
+
+Actions
+• Remove scrap machines from decline laydown area to the salvage yard
+• Adhere to CAS L9 schedule
+
+Lowlights
+• Fermel technician on site for the week, but couldn't resolve issues on UV77
+• Inconsistent data between Qlikview and PowerBI

@@ -48,6 +48,19 @@ This workflow orchestrates the entire weekly report update process, from data ex
     *   **Verify File Path:** Before editing, confirm you are targeting `weekly-report-generator/src/data/reportData.ts`. An identically named file at the root `src/` must be ignored.
     *   **Check Component Logic:** If data appears correct in the file but renders incorrectly on a slide (e.g., is missing or truncated), the next step is to investigate the corresponding `.tsx` component file for hardcoded presentation logic (e.g., item limits).
 
+7.  **Validate Availability Correlation (MANDATORY - NEW):**
+    *   **Cross-check all site performance percentages against trend chart values:**
+        *   [ ] N3 weekly average matches trend chart final value
+        *   [ ] N2 weekly average matches trend chart final value
+        *   [ ] Gloria weekly average matches trend chart final value
+        *   [ ] All equipment percentages (DT, FL, HD, RT, SR) match trend chart boxes
+    *   **Verify color coding aligns with ranges:**
+        *   [ ] Green: ≥85% (above target)
+        *   [ ] Amber/Yellow: 80-84% (below target but acceptable)
+        *   [ ] Red: <80% (critical)
+    *   **Flag any discrepancies:** If performance overview percentages don't match trend chart, use placeholder image and revert to CSV-based values.
+    *   **Update component styling if needed:** Ensure `SitePerformanceSlide.tsx` uses correct threshold (`target - 5` for amber range).
+
 ### **Phase 3: Automated Slide Review**
 
 1.  **Run Review Workflow:**

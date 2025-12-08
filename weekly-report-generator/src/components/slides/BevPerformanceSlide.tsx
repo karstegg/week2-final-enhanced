@@ -24,27 +24,7 @@ type Breakdown = { equipment: string; details: string[] };
 
 function summarizeBreakdown(bd: Breakdown) {
   const details = Array.isArray(bd.details) ? bd.details : [];
-  const totalLine = details.find((d) => /^Total delay/i.test(d)) || '';
-  const topCausesLine = details.find((d) => /^Top causes/i.test(d)) || '';
-  let causes: string[] = [];
-  if (topCausesLine) {
-    const after = topCausesLine.split(':')[1] || '';
-    causes = after.split(';').map((s) => s.trim()).filter(Boolean);
-  }
-  const topMachinesLine = details.find((d) => /^Top machines/i.test(d));
-  let machines: string[] = [];
-  let moreMachines = 0;
-  if (topMachinesLine) {
-    const after = topMachinesLine.split(':')[1] || '';
-    const parsed = after.split(';').map((s) => s.trim()).filter(Boolean);
-    machines = parsed;
-    moreMachines = Math.max(parsed.length - machines.length, 0);
-  }
-  const total = totalLine
-    .replace(/Total delay\s*/i, 'Total delay: ')
-    .replace(/\(Week\s*(\d+)\)/i, '(Wk $1)')
-    .trim();
-  return { total, causes, machines, moreMachines };
+  return { issues: details };
 }
 
 const BevPerformanceSlide: React.FC<BevPerformanceSlideProps> = ({ data, footerSrc, weekNumber }) => {
@@ -103,14 +83,7 @@ const BevPerformanceSlide: React.FC<BevPerformanceSlideProps> = ({ data, footerS
                     <li key={i}>
                       <div className="font-semibold">{bd.equipment}</div>
                       <ul className="list-disc pl-4 space-y-0.5">
-                        {s.total && <li>{s.total}</li>}
-                        {s.causes.length > 0 && <li>Top causes: {s.causes.join('; ')}</li>}
-                        {s.machines.length > 0 && (
-                          <li>
-                            Top machines: {s.machines.join('; ')}
-                            {s.moreMachines > 0 ? ` (+${s.moreMachines} more)` : ''}
-                          </li>
-                        )}
+                        {s.issues.map((issue, j) => <li key={j}>{issue}</li>)}
                       </ul>
                     </li>
                   );
